@@ -41,3 +41,25 @@ footer {
   line-height: 2em;
   vertical-align: middle;
 }
+
+
+.hangman-area, .guess-area {
+  min-height: $hangman-height;
+}
+
+.guess-area {
+  position: relative;
+  .previous-guesses {
+  } 
+  .new-guesses {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+

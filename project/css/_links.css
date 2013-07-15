@@ -35,23 +35,6 @@
   vertical-align: middle;
 }
 
-a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #999999;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  letter-spacing: 0.15em;
-}
-a.btn {
-  font-size: 14px;
-  line-height: 36px;
-  letter-spacing: 0;
-  text-transform: none;
-}
-a.btn:hover {
-  text-decoration: none;
-}
 a:link {
   color: #42b8dd;
 }

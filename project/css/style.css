@@ -75,6 +75,19 @@ footer {
   vertical-align: middle;
 }
 
+.hangman-area, .guess-area {
+  min-height: 400px;
+}
+
+.guess-area {
+  position: relative;
+}
+.guess-area .new-guesses {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
 .font, body {
   font-family: "Droid Sans", arial;
   font-size: 14px;
