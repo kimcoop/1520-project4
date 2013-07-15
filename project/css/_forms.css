@@ -20,21 +20,6 @@
   color: #777777;
 }
 
-.transparent {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-}
-
-.vertical-align-parent {
-  display: table;
-}
-
-.vertical-align-child {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 /*
 *= Forms 
 */

@@ -20,19 +20,14 @@
   color: #777777;
 }
 
-.transparent {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+#blanks {
+  text-align: justify;
 }
-
-.vertical-align-parent {
-  display: table;
-}
-
-.vertical-align-child {
-  display: table-cell;
-  vertical-align: middle;
+#blanks:after {
+  content: "";
+  display: block;
+  font-size: 0.01px;
+  width: 100%;
 }
 
 html, body {
@@ -82,8 +77,28 @@ footer {
 .guess-area {
   position: relative;
 }
+.guess-area .previous-guesses {
+  text-transform: uppercase;
+}
 .guess-area .new-guesses {
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
+}
+
+#blanks {
+  margin: 1em auto 0;
+}
+#blanks .blank {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-bottom: thick solid black;
+}
+#blanks .blank:last-child {
+  margin-right: 0;
 }

@@ -50,17 +50,18 @@ $alert-layer: 1;
   color: $dark-grey;
 }
 
-.transparent {
+%transparent {
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
-.vertical-align-parent {
-  display: table;
-}
-
-.vertical-align-child {
-  display: table-cell;
-  vertical-align: middle;
+%justified {
+  text-align: justify;
+  &:after {
+    content: "";
+    display: block;
+    font-size: 0.01px;
+    width: 100%;
+  }
 }

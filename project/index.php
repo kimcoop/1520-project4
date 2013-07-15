@@ -8,12 +8,22 @@
 
   <div class="row" id="hangman" style="display:none1">
     <div class="well span7 hangman-area">
-      <img src="http://placebear.com/200/300" />
+      <img src="http://placebear.com/500/300" />
+      <div id="blanks"></div>
     </div><!-- .hangman-area -->
 
     <div class="span5 guess-area">
       <div class="row">
-        <div class="well span5 previous-guesses">
+        <div class="well span5">
+          <h3>
+            Correct Guesses:&nbsp;
+            <span class="num-correct-guesses"></span>
+          </h3>
+          <h3>
+            Incorrect Guesses:&nbsp;
+            <span class="num-incorrect-guesses"></span>
+          </h3>
+          <div class="previous-guesses"></div>
         </div>
       </div>
       <div class="row">

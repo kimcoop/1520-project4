@@ -42,7 +42,6 @@ footer {
   vertical-align: middle;
 }
 
-
 .hangman-area, .guess-area {
   min-height: $hangman-height;
 }
@@ -50,6 +49,7 @@ footer {
 .guess-area {
   position: relative;
   .previous-guesses {
+    text-transform: uppercase;
   } 
   .new-guesses {
     position: absolute;
@@ -58,8 +58,23 @@ footer {
   }
 }
 
+$blank-size: 40px;
+$blank-margin: 5px;
 
-
-
-
-
+#blanks {
+  @extend %justified;
+  margin: 1em auto 0;
+  .blank {
+    width: $blank-size;
+    height: $blank-size;
+    margin-right: $blank-margin;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border-bottom: thick solid black;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

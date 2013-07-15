@@ -20,19 +20,14 @@
   color: #777777;
 }
 
-.transparent {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+#blanks {
+  text-align: justify;
 }
-
-.vertical-align-parent {
-  display: table;
-}
-
-.vertical-align-child {
-  display: table-cell;
-  vertical-align: middle;
+#blanks:after {
+  content: "";
+  display: block;
+  font-size: 0.01px;
+  width: 100%;
 }
 
 html, body {
@@ -82,10 +77,30 @@ footer {
 .guess-area {
   position: relative;
 }
+.guess-area .previous-guesses {
+  text-transform: uppercase;
+}
 .guess-area .new-guesses {
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
+}
+
+#blanks {
+  margin: 1em auto 0;
+}
+#blanks .blank {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-bottom: thick solid black;
+}
+#blanks .blank:last-child {
+  margin-right: 0;
 }
 
 .font, body {
@@ -110,19 +125,90 @@ footer {
   color: #777777;
 }
 
-.transparent {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+#blanks {
+  text-align: justify;
+}
+#blanks:after {
+  content: "";
+  display: block;
+  font-size: 0.01px;
+  width: 100%;
 }
 
-.vertical-align-parent {
-  display: table;
+h1, h2, h3, h4 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #007d9a;
+}
+h1 small, h2 small, h3 small, h4 small {
+  color: #dddddd;
 }
 
-.vertical-align-child {
-  display: table-cell;
-  vertical-align: middle;
+h1, h2, h3 {
+  color: #777777;
+  margin: 0;
+  line-height: 0.8em;
+}
+
+h1, h2 {
+  font-family: "Lobster", arial !important;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.7em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+p {
+  margin: 1em 0;
+  word-wrap: break-word;
+}
+
+.text-primary, h1, h2 {
+  color: #42b8dd;
+}
+
+.font, body {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #555555;
+}
+
+.font-secondary {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.big {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.2em 0 1em;
+  padding: 0;
+  color: #777777;
+}
+
+#blanks {
+  text-align: justify;
+}
+#blanks:after {
+  content: "";
+  display: block;
+  font-size: 0.01px;
+  width: 100%;
 }
 
 /*
@@ -156,19 +242,14 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   color: #777777;
 }
 
-.transparent {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+#blanks {
+  text-align: justify;
 }
-
-.vertical-align-parent {
-  display: table;
-}
-
-.vertical-align-child {
-  display: table-cell;
-  vertical-align: middle;
+#blanks:after {
+  content: "";
+  display: block;
+  font-size: 0.01px;
+  width: 100%;
 }
 
 header {

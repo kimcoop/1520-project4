@@ -3,7 +3,7 @@
   require_once( 'functions.php' ); // includes session_start()
 
   function get_random_word() {
-    return "pinecone";
+    return "fan";
   }
 
 
