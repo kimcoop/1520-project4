@@ -5,10 +5,6 @@ html, body {
 }
 
 body {
-  margin: 0; 
-  padding: 0;
-  font-size: 12px;
-  line-height: 1.5;
   @extend .font;
 }
 
@@ -20,19 +16,14 @@ body {
   height: 100%;
   overflow: hidden;
   margin-bottom: 20px;
+  margin: ($header-height + 20px) auto -4em;
 }
 
 .container {
-  width: $container-width;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto;
-  padding: 10px;
-  &.main {
-    margin: ($header-height + 20px) auto -4em;
-    line-height: 1.8em;
-  }
 }
 
 footer, .push {

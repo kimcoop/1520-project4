@@ -2,7 +2,6 @@
   font-family: "Droid Sans", arial;
   font-size: 14px;
   color: #555555;
-  line-height: 20px;
 }
 
 .font-secondary {
@@ -27,12 +26,6 @@
   opacity: 0.5;
 }
 
-.clearfix {
-  content: "";
-  clear: both;
-  line-height: 0;
-}
-
 .vertical-align-parent {
   display: table;
 }
@@ -46,13 +39,6 @@ html, body {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -63,19 +49,14 @@ body {
   height: 100%;
   overflow: hidden;
   margin-bottom: 20px;
+  margin: 100px auto -4em;
 }
 
 .container {
-  width: 815px;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto;
-  padding: 10px;
-}
-.container.main {
-  margin: 100px auto -4em;
-  line-height: 1.8em;
 }
 
 footer, .push {

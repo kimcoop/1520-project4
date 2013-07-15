@@ -2,7 +2,6 @@
   font-family: "Droid Sans", arial;
   font-size: 14px;
   color: #555555;
-  line-height: 20px;
 }
 
 .font-secondary, h1, h2, h3 {
@@ -25,12 +24,6 @@
   zoom: 1;
   filter: alpha(opacity=50);
   opacity: 0.5;
-}
-
-.clearfix {
-  content: "";
-  clear: both;
-  line-height: 0;
 }
 
 .vertical-align-parent {
