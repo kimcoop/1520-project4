@@ -1,0 +1,13 @@
+@import "base";
+
+header {
+  height: $header-height;
+  width: 100%;
+  padding-bottom: 0;
+  position: fixed;
+  z-index: $header-layer;
+  top: 0;
+  background: lighten( $primary, 10% );
+  background: #fff;
+  border-bottom: thick solid $super-light-grey;
+}

@@ -1,0 +1,81 @@
+.font {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #555555;
+  line-height: 20px;
+}
+
+.font-secondary {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.big {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.2em 0 1em;
+  padding: 0;
+  color: #777777;
+}
+
+.transparent {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  line-height: 0;
+}
+
+.vertical-align-parent {
+  display: table;
+}
+
+.vertical-align-child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #999999;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.15em;
+}
+a.btn {
+  font-size: 14px;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+a.btn:hover {
+  text-decoration: none;
+}
+a:link {
+  color: #42b8dd;
+}
+a:visited {
+  color: #208fb2;
+}
+a:active {
+  color: #208fb2;
+}
+a:hover, a:focus {
+  color: #208fb2;
+  text-decoration: underline;
+}
+a:active, a:hover {
+  outline: none;
+}
+a img {
+  border: none;
+  vertical-align: middle;
+}

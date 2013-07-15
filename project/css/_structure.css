@@ -1,0 +1,95 @@
+.font, body {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #555555;
+  line-height: 20px;
+}
+
+.font-secondary {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.big {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.2em 0 1em;
+  padding: 0;
+  color: #777777;
+}
+
+.transparent {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  line-height: 0;
+}
+
+.vertical-align-parent {
+  display: table;
+}
+
+.vertical-align-child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#main {
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 815px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.container.main {
+  margin: 100px auto -4em;
+  line-height: 1.8em;
+}
+
+footer, .push {
+  clear: both;
+  height: 4em;
+}
+footer p, .push p {
+  color: #efefef;
+  margin: 0;
+}
+
+footer {
+  background: #65c5e3;
+  border-top: thick solid #efefef;
+  line-height: 2em;
+  vertical-align: middle;
+}

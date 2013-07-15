@@ -1,0 +1,128 @@
+.font, input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea, button, .btn {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #555555;
+  line-height: 20px;
+}
+
+.font-secondary {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.big {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.2em 0 1em;
+  padding: 0;
+  color: #777777;
+}
+
+.transparent {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  line-height: 0;
+}
+
+.vertical-align-parent {
+  display: table;
+}
+
+.vertical-align-child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+input, button, .btn, select, textarea {
+  margin-top: 2px;
+  vertical-align: middle;
+}
+input textarea, button textarea, .btn textarea, select textarea, textarea textarea {
+  vertical-align: baseline;
+}
+input.input-block-level, button.input-block-level, .btn.input-block-level, select.input-block-level, textarea.input-block-level {
+  width: 100%;
+}
+input.input-small, button.input-small, .btn.input-small, select.input-small, textarea.input-small {
+  width: 90px;
+}
+input.input-large, button.input-large, .btn.input-large, select.input-large, textarea.input-large {
+  width: 300px;
+}
+input.btn-block, button.btn-block, .btn.btn-block, select.btn-block, textarea.btn-block {
+  width: 100%;
+  display: block;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=month], input[type=time], input[type=datetime], input[type=datetime-local], input[type=week], input[type=number], input[type=search], input[type=tel], input[type=color], select, textarea {
+  -webkit-transition: 0.3s linear border;
+  -moz-transition: 0.3s linear border;
+  -o-transition: 0.3s linear border;
+  transition: 0.3s linear border;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: .8em;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  -webkit-font-smoothing: antialiased;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=date]:focus, input[type=month]:focus, input[type=time]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=week]:focus, input[type=number]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=color]:focus, select:focus, textarea:focus {
+  outline: 0;
+  border-color: #007d9a;
+}
+
+button, .btn {
+  -webkit-transition: 0.1s linear -webkit-box-shadow;
+  -moz-transition: 0.1s linear -webkit-box-shadow;
+  -o-transition: 0.1s linear -webkit-box-shadow;
+  transition: 0.1s linear -webkit-box-shadow;
+  line-height: 36px;
+  height: 36px;
+  max-height: 36px;
+  vertical-align: middle;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 0 1.5em;
+  color: #fff !important;
+  border: 1px solid #999;
+  border: 0 rgba(0, 0, 0, 0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  -webkit-font-smoothing: antialiased;
+  background: #42b8dd;
+}
+button:hover, button:focus, .btn:hover, .btn:focus {
+  outline: 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+button.btn-large, .btn.btn-large {
+  height: 46px;
+  padding: 0 2.0em;
+}
+
+.form-signin, .form-small {
+  width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  margin: 1.2em 0 0;
+}

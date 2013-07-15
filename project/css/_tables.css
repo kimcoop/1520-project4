@@ -1,0 +1,63 @@
+.font {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #555555;
+  line-height: 20px;
+}
+
+.font-secondary {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.big {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.2em 0 1em;
+  padding: 0;
+  color: #777777;
+}
+
+.transparent {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
+  line-height: 0;
+}
+
+.vertical-align-parent {
+  display: table;
+}
+
+.vertical-align-child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table tr td, table tr th {
+  vertical-align: top;
+  background: #fff;
+  padding: 0.8em 1em;
+  text-align: left;
+  border-width: 0 0 1px;
+  border-bottom: 1px solid #f3f3f3;
+}
+table tr td {
+  max-width: 450px;
+  word-wrap: break-word;
+}
+table.table-hover tr:hover td {
+  background: #f3f3f3;
+}
