@@ -4,13 +4,14 @@ body {
   color: #666666;
 }
 
-.guess-area .new-guesses {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
 
-#blanks {
+.guess-area .previous-guesses, #blanks {
   font-family: "Rock Salt", arial;
+  font-size: 1.2em;
 }
 
 .big {
@@ -96,9 +97,26 @@ footer {
 .guess-area {
   position: relative;
 }
+.guess-area .num-guesses {
+  text-align: center;
+  min-height: 70px;
+}
+.guess-area .num-guesses:first-child {
+  padding-bottom: 2em;
+}
+.guess-area .num-guesses:last-child {
+  padding-top: 2em;
+  border-top: 2px solid #2484de;
+}
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses {
+  display: block;
+  font-size: 3em;
+  margin-bottom: 15px;
+}
 .guess-area .previous-guesses {
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 1.5em;
+  line-height: 3em;
 }
 .guess-area .new-guesses {
   font-size: 1.8em;
@@ -107,10 +125,6 @@ footer {
   margin-bottom: 0;
 }
 .guess-area .new-guesses .letter {
-  -webkit-transition: 300ms all ease;
-  -moz-transition: 300ms all ease;
-  -o-transition: 300ms all ease;
-  transition: 300ms all ease;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -129,6 +143,13 @@ footer {
 .guess-area .new-guesses .letter:hover {
   background: #ffdb00;
 }
+.guess-area .new-guesses .letter.disabled {
+  color: transparent;
+  cursor: default;
+}
+.guess-area .new-guesses .letter.disabled:hover {
+  background: transparent;
+}
 
 #blanks {
   width: 100%;
@@ -136,8 +157,8 @@ footer {
 }
 #blanks .blank {
   width: 40px;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   margin-right: 5px;
   display: inline-block;
   text-align: center;

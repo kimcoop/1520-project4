@@ -61,12 +61,32 @@ footer {
 
 $letter-width: 40px;
 $letter-height: 35px;
+$num-guesses-height: 70px;
 
 .guess-area {
   position: relative;
+  .num-guesses {
+    text-align: center;
+    min-height: $num-guesses-height;
+    &:first-child {
+      padding-bottom: 2em;
+    }
+    &:last-child {
+      padding-top: 2em;
+      border-top: 2px solid $primary;
+    }
+    .num-incorrect-guesses, .num-correct-guesses {
+      @extend %font-secondary;
+      display: block;
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+  }
   .previous-guesses {
+    @extend %handwriting;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
+    letter-spacing: 1.5em;
+    line-height: 3em;
   } 
   .new-guesses {
     @extend %font-secondary;
@@ -75,9 +95,7 @@ $letter-height: 35px;
     bottom: 0;
     margin-bottom: 0;
     .letter {
-      @include transition( 300ms all ease );
       @include border-radius( 50% );
-      // @extend %rock-salt;
       width: $letter-width;
       height: $letter-height;
       display: inline-block;
@@ -92,22 +110,30 @@ $letter-height: 35px;
       &:hover {
         background: $secondary-B;
       }
+      &.disabled {
+        color: transparent;
+        cursor: default;
+        &:hover {
+          background: transparent;
+        }
+      }
     }
   }
 }
 
-$blank-size: 40px;
+$blank-width: 40px;
+$blank-height: 50px;
 $blank-margin: 5px;
 
 #blanks {
   @extend %justified;
-  @extend %rock-salt;
+  @extend %handwriting;
   width: 100%;
   margin: 1em auto 0;
   .blank {
-    width: $blank-size;
-    height: $blank-size;
-    line-height: $blank-size;
+    width: $blank-width;
+    height: $blank-height;
+    line-height: $blank-height;
     margin-right: $blank-margin;
     display: inline-block;
     text-align: center;

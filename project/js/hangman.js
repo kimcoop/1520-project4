@@ -9,7 +9,7 @@ var Hangman = {
   },
   word: undefined,
   gameInProgress: false,
-  prevGuess: '',
+  prevGuess: {},
   numGuesses: 0,
   numCorrectGuesses: 0,
   numIncorrectGuesses: 0,
@@ -19,7 +19,7 @@ var Hangman = {
 
   reset: function() {
     Hangman.word = undefined;
-    Hangman.prevGuess = '';
+    Hangman.prevGuess = {};
     Hangman.numGuesses = 0;
     Hangman.numCorrectGuesses = 0;
     Hangman.numIncorrectGuesses = 0;
@@ -43,11 +43,17 @@ var Hangman = {
   },
 
   updateBoard: function() {
-    Hangman.els.prevGuesses.html( Hangman.els.prevGuesses.html() + Hangman.prevGuess );
+    if ( Hangman.numGuesses > 0 )
+      prevGuessMarkup = Hangman.prevGuess.correct ? Hangman.prevGuess.letter : "<span class='strikethrough'>" + Hangman.prevGuess.letter + "</span>";
+    else
+      prevGuessMarkup = '';
+    Hangman.els.prevGuesses.html( Hangman.els.prevGuesses.html() + prevGuessMarkup );
+
+    if ( !!Hangman.word && Hangman.els.blanks.html() == "" ) // set up blanks only on init if we have a word
+      Hangman.setUpBlanks();
+
     Hangman.els.numCorrectGuesses.text( Hangman.numCorrectGuesses );
     Hangman.els.numIncorrectGuesses.text( Hangman.numIncorrectGuesses );
-    if ( !!Hangman.word && Hangman.els.blanks.html() == "" ) // set up blanks only on init
-      Hangman.setUpBlanks();
   },
 
   setUpBlanks: function() {
@@ -69,17 +75,19 @@ var Hangman = {
     }
 
     Hangman.numGuesses += 1;
-    Hangman.prevGuess = letter;
+    Hangman.prevGuess.letter = letter;
 
     var letterIndex = Hangman.word.indexOf( letter ),
       letterInWord =  letterIndex > -1;
 
     if ( letterInWord ) {
+      Hangman.prevGuess.correct = true;
       Hangman.correctLetters.push( letter );
       Hangman.numCorrectGuesses += 1;
       Alert.show( "Letter " +letter.toUpperCase()+ " was a correct guess!", "success" );
       Hangman.els.blanks.children().eq( letterIndex ).html( letter );
     } else {
+      Hangman.prevGuess.correct = false;
       Hangman.incorrectLetters.push( letter );
       Hangman.numIncorrectGuesses += 1;
       Alert.show( "Incorrect. Letter " +letter.toUpperCase()+ " is not in the word.", "error" );

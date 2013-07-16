@@ -1,6 +1,6 @@
 <?php include('templates/header.php') ?>
 
-  <div id="intro">
+  <div id="intro" style="display:none">
     <p class="big">Welcome! Are you ready to play?</p>
     <a href="routes.php?action=start_new_round" class="btn btn-block start-new-round">Start New Round</a>
     <br>
@@ -15,20 +15,21 @@
       </div><!-- .hangman-area -->
 
       <div class="span5 guess-area">
-        <div class="row">
-          <div class="well span5">
-            <p>
-              Correct Guesses:&nbsp;
-              <span class="num-correct-guesses"></span>
-            </p>
-            <p>
-              Incorrect Guesses:&nbsp;
-              <span class="num-incorrect-guesses"></span>
-            </p>
-            <p>Previous Guesses:&nbsp;</p>
+        <div class="row row-guesses-summary">
+          <div class="span3">
             <div class="previous-guesses"></div>
           </div>
-        </div>
+          <div class="span2 text-center">
+            <div class="num-guesses">
+              <span class="num-correct-guesses"></span>
+              Correct<br>Guesses
+            </div>
+            <div class="num-guesses">
+              <span class="num-incorrect-guesses "></span>
+              Incorrect<br>Guesses
+            </div>
+          </div>
+        </div><!-- .row-guesses-summary -->
         <div class="row">
           <div class="well span5 new-guesses">
             <span class="letter">A</span>
@@ -39,6 +40,7 @@
             <span class="letter">F</span>
             <span class="letter">G</span>
             <span class="letter">H</span>
+            <span class="letter">I</span>
             <span class="letter">J</span>
             <span class="letter">K</span>
             <span class="letter">L</span>

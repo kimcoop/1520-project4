@@ -25,7 +25,7 @@ $success-border: #d6e9c6;
 $success-color: #468847;
 $error-background: #f2dede;
 $error-border: #eed3d7;
-$error-color: #b94a48;
+$error-color: rgba(185, 74, 72, 0.6);
 
 $header-height: 80px;
 $hangman-height: 400px;
@@ -45,8 +45,9 @@ $alert-layer: 1;
   font-weight: 900;
 }
 
-%rock-salt {
+%handwriting {
   font-family: $rock-salt;
+  font-size: 1.2em;
 }
 
 .big {

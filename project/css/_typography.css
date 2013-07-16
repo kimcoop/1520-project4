@@ -48,3 +48,25 @@ p {
 .text-primary, h1, h2 {
   color: #2484de;
 }
+
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  content: "/";
+  font-size: 1.4em;
+  position: absolute;
+  top: -0.5em;
+  left: 0.2em;
+  color: rgba(185, 74, 72, 0.6);
+}
+.strikethrough:nth-child(3):before {
+  top: 0em;
+}
+.strikethrough:nth-child(4):before {
+  left: 0.3em;
+}
+.strikethrough:nth-child(5):before {
+  left: 0.1em;
+  top: -0.1em;
+}
