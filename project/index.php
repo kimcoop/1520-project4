@@ -2,7 +2,7 @@
 
   <div id="intro" style="display:none">
     <p class="big">Welcome! Are you ready to play?</p>
-    <a href="routes.php?action=start_new_round" class="btn btn-block start-new-round">Start New Round</a>
+    <a href="" class="btn btn-block start-new-round">Start New Round</a>
     <br>
     <br>
   </div>

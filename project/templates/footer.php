@@ -3,7 +3,7 @@
       <div class="push"></div>
   </div><!-- .container.main -->
 
-  <!-- <footer>
+  <footer>
     <div class="container">
       <p class="text-center">
         <?php
@@ -13,25 +13,28 @@
       </p>
     </div>
   </footer>
- -->
+
+  <?php include( 'templates/dialog.php' ); ?>
+ 
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
   <script src="js/alert.js"></script>
+  <script src="js/routes.js"></script>
   <script src="js/hangman.js"></script>
   
   <script type="text/javascript">
   $(function() {
-    $('a').on( 'click', function(e) {
-      e.preventDefault();
-      $.ajax({
-        url: this.href,
-        type: "GET",
-        data: {},
-      }).done( function( data ) {
-        console.debug( data );
-      });
-    });
+    // $('a').on( 'click', function(e) {
+    //   e.preventDefault();
+    //   $.ajax({
+    //     url: this.href,
+    //     type: "GET",
+    //     data: {},
+    //   }).done( function( data ) {
+    //     console.debug( data );
+    //   });
+    // });
 
     $('form').on( 'submit', function(e) {
       e.preventDefault();
@@ -42,10 +45,11 @@
       e.preventDefault();
       parentClass = $(this).data( 'parent' );
       $(this).parent( '.'+parentClass ).slideUp();
-    })
+    });
 
     $('.start-new-round').on( 'click', function(e) {
       e.preventDefault();
+      Alert.begone( '#dialog-container' );
       if ( Hangman.gameInProgress ) {
         quitCurrentGame = confirm( 'Quit current game?' );
         // make sure the user wants to terminate the current game if there is one in progress
@@ -53,7 +57,7 @@
           return;
       }
       $.ajax({
-        url: this.href,
+        url: Routes.startNewRound,
         type: "GET",
         data: {},
       }).done( function( data ) {

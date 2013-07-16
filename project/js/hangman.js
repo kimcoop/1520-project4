@@ -102,16 +102,19 @@ var Hangman = {
     gameWon = Hangman.numCorrectGuesses == Hangman.word.length;
     // OR if player has guessed wrong 7 times
     gameLost = Hangman.numIncorrectGuesses == Hangman.wrongGuessesLimit;
+    if ( gameWon || gameLost ) 
+      Hangman.gameInProgress = false;
+
     if ( gameWon ) Hangman.gameWon();
     else if ( gameLost ) Hangman.gameLost();
   },
 
   gameWon: function() {
-    alert( 'you won!' );
+    Alert.showGameOver( 'won', Hangman.word );
   },
 
   gameLost: function() {
-    alert(' you lost');
+    Alert.showGameOver( 'lost', Hangman.word );
   }
 
     
