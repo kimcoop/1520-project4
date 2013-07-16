@@ -2,7 +2,6 @@
 
 h1, h2, h3, h4 {
   font-weight: normal;
-  letter-spacing: -1px;
   color: $secondary-A;
   small {
     color: $medium-grey;
@@ -10,18 +9,16 @@ h1, h2, h3, h4 {
 }
 
 h1, h2, h3 {
-  // @extend .font-secondary;
   color: $secondary-B;
   margin: 0;
   line-height: 0.8em;
 }
 
-h1, h2 {
-  @extend .text-primary;
-}
 
 h1 {
-  font-size: 3em;
+  @extend %handwriting;
+  color: $complementary;
+  font-size: 3em !important;
 }
 
 h2 {
@@ -29,7 +26,9 @@ h2 {
 }
 
 h3 {
+  @extend %font-secondary;
   font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 h4 {
@@ -55,7 +54,7 @@ p {
     left: 0.2em;
     color: $error-color;
   }
-  &:nth-child(3) { &:before { top: 0em; } }
+  &:nth-child(3) { &:before { top: -0.2em; } }
   &:nth-child(4) { &:before { left: 0.3em; } }
   &:nth-child(5) { &:before { left: 0.1em; top: -0.1em; } }
 }

@@ -4,12 +4,12 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, button, .btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
 
-.guess-area .previous-guesses, #blanks {
+.guess-area .previous-guesses, #blanks, h1 {
   font-family: "Rock Salt", arial;
   font-size: 1.2em;
 }
@@ -41,6 +41,7 @@ html, body {
 
 body {
   background: #ecf0f1;
+  background: #071c71;
 }
 
 * {
@@ -80,7 +81,10 @@ footer {
 }
 
 .well {
-  background: white;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #ecf0f1;
   border: 4px solid #2484de;
 }
 
@@ -102,11 +106,12 @@ footer {
   min-height: 70px;
 }
 .guess-area .num-guesses:first-child {
+  padding-top: 1em;
   padding-bottom: 2em;
 }
 .guess-area .num-guesses:last-child {
   padding-top: 2em;
-  border-top: 2px solid #2484de;
+  border-top: 3px solid #2484de;
 }
 .guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses {
   display: block;
@@ -117,12 +122,10 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1.5em;
   line-height: 3em;
+  min-height: 8em;
 }
 .guess-area .new-guesses {
   font-size: 1.8em;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0;
 }
 .guess-area .new-guesses .letter {
   -webkit-border-radius: 50%;
@@ -170,18 +173,36 @@ footer {
   margin-right: 0;
 }
 
+#alert {
+  -moz-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 2em;
+  left: 5em;
+  width: 250px;
+  z-index: 10;
+  padding: 2em 2em 2em 1em;
+}
+#alert.alert-error {
+  border: 4px solid rgba(185, 74, 72, 0.6);
+}
+#alert.alert-success {
+  border: 4px solid #468847;
+}
+
 body {
   font-family: "Droid Sans", arial;
   font-size: 14px;
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, button, .btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
 
-.guess-area .previous-guesses, #blanks {
+.guess-area .previous-guesses, #blanks, h1 {
   font-family: "Rock Salt", arial;
   font-size: 1.2em;
 }
@@ -209,7 +230,6 @@ body {
 
 h1, h2, h3, h4 {
   font-weight: normal;
-  letter-spacing: -1px;
   color: #4312ae;
 }
 h1 small, h2 small, h3 small, h4 small {
@@ -223,7 +243,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3em;
+  color: #ffb300;
+  font-size: 3em !important;
 }
 
 h2 {
@@ -232,6 +253,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 h4 {
@@ -243,7 +265,7 @@ p {
   word-wrap: break-word;
 }
 
-.text-primary, h1, h2 {
+.text-primary {
   color: #2484de;
 }
 
@@ -259,7 +281,7 @@ p {
   color: rgba(185, 74, 72, 0.6);
 }
 .strikethrough:nth-child(3):before {
-  top: 0em;
+  top: -0.2em;
 }
 .strikethrough:nth-child(4):before {
   left: 0.3em;
@@ -275,12 +297,12 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, button, .btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
 
-.guess-area .previous-guesses, #blanks {
+.guess-area .previous-guesses, #blanks, h1 {
   font-family: "Rock Salt", arial;
   font-size: 1.2em;
 }
@@ -342,12 +364,12 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, button, .btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
 
-.guess-area .previous-guesses, #blanks {
+.guess-area .previous-guesses, #blanks, h1 {
   font-family: "Rock Salt", arial;
   font-size: 1.2em;
 }
@@ -375,9 +397,9 @@ body {
 
 header {
   height: 80px;
+  margin-top: 40px;
 }
 header .nav-container .title {
-  color: #2484de;
   height: inherit !important;
   line-height: 80px;
   vertical-align: middle;

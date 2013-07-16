@@ -2,10 +2,9 @@
 
 header {
   height: $header-height;
+  margin-top: 40px;
   .nav-container {
     .title {
-      @extend %font-secondary;
-      color: $primary;
       height: inherit !important;
       line-height: $header-height;
       vertical-align: middle;

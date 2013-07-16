@@ -8,30 +8,26 @@
   </div>
 
   <div id="hangman" style="display:none1">
-    <div class="row">
+    <div class="row row-gameboard">
       <div class="well span7 hangman-area">
-        <img src="http://placebear.com/500/300" />
+        <img src="images/hangman-base.png" />
         <div id="blanks"></div>
       </div><!-- .hangman-area -->
 
       <div class="span5 guess-area">
         <div class="row row-guesses-summary">
-          <div class="span3">
-            <div class="previous-guesses"></div>
-          </div>
-          <div class="span2 text-center">
-            <div class="num-guesses">
-              <span class="num-correct-guesses"></span>
-              Correct<br>Guesses
-            </div>
-            <div class="num-guesses">
-              <span class="num-incorrect-guesses "></span>
-              Incorrect<br>Guesses
-            </div>
+          <div class="span5">
+            <h3>
+              Your Guesses (<span class="num-correct-guesses"></span> correct, <span class="num-incorrect-guesses"></span> incorrect)
+            </h3>
+            <div class="well previous-guesses"></div>
           </div>
         </div><!-- .row-guesses-summary -->
         <div class="row">
-          <div class="well span5 new-guesses">
+          <div class="span5"><h3>Available Letters</h3></div>
+        </div>
+        <div class="row new-guesses">
+          <div class="well span5">
             <span class="letter">A</span>
             <span class="letter">B</span>
             <span class="letter">C</span>
@@ -60,15 +56,16 @@
             <span class="letter">Z</span>
           </div>
         </div>
+        <div class="row">
+          <div class="span3">
+            <a href="routes.php?action=start_new_round" class="btn btn-block start-new-round">Start New Round</a>
+          </div>
+          <div class="span2">
+            <a href="routes.php?action=quit" class="btn btn-block quit">Quit</a>
+          </div>
+        </div>
       </div><!-- .guess-area -->
     </div><!-- .row -->
-    <div class="row">
-      <div class="span12">
-        <a href="routes.php?action=start_new_round" class="btn start-new-round">Start New Round</a>
-        &nbsp;&nbsp;
-        <a href="routes.php?action=quit" class="btn quit">Quit</a>
-      </div>
-    </div>
   </div><!-- #hangman -->
 
 <?php include('templates/footer.php') ?>

@@ -1,8 +1,3 @@
-header .nav-container .title {
-  font-family: "Source Sans Pro", helvetica, sans-serif;
-  font-weight: 900;
-}
-
 .big {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
@@ -16,9 +11,9 @@ header .nav-container .title {
 
 header {
   height: 80px;
+  margin-top: 40px;
 }
 header .nav-container .title {
-  color: #2484de;
   height: inherit !important;
   line-height: 80px;
   vertical-align: middle;

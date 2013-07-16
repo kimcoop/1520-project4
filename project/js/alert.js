@@ -1,12 +1,18 @@
 var Alert = {
-  el: $('#alert'),
-  textEl: $('.alert-text'),
+  els: {
+    main: $('#alert'),
+    textEl: $('.alert-text')
+  },
+  fadeTimeIn: 400,
+  fadeTimeOut: 1800,
   
-  show: function( message, type ) {
-    Alert.el.removeClass( 'alert-success alert-error' );
-    Alert.el.addClass( 'alert-' + type );
-    Alert.textEl.html( message );
-    Alert.el.fadeIn();
+  showWithFade: function( message, type ) {
+    Alert.els.main.removeClass( 'alert-success alert-error' );
+    Alert.els.main.addClass( 'alert-' + type );
+    Alert.els.textEl.html( message );
+    Alert.els.main.stop().fadeIn( Alert.fadeTimeIn, function() {
+      $(this).fadeOut( Alert.fadeTimeOut );
+    });
   }
    
 }

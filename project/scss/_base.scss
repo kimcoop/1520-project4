@@ -2,7 +2,8 @@
 
 $font-primary: 'Droid Sans', arial;
 $normal: 14px;
-$font-secondary: "Source Sans Pro",helvetica,sans-serif;
+$font-secondary: "Source Sans Pro", helvetica,sans-serif;
+// $font-secondary: "Permanent Marker", helvetica,sans-serif;
 $rock-salt: 'Rock Salt', arial;
 
 $color: #666;
@@ -33,6 +34,7 @@ $hangman-height: 400px;
 $header-layer: 2;
 $alert-layer: 1;
 
+$faded: rgba( 0, 0, 0, 0.4 );
 
 %font {
   font-family: $font-primary;

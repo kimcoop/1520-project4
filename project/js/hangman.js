@@ -69,8 +69,8 @@ var Hangman = {
     letter = letter.toLowerCase();
     letterAlreadyGuessed = Hangman.correctLetters.indexOf( letter ) > -1 || Hangman.incorrectLetters.indexOf( letter ) > -1;
 
-    if ( letterAlreadyGuessed ) {
-      Alert.show( "You have already guessed the letter " +letter+ ".", "error" );
+    if ( letterAlreadyGuessed ) { // this is impossible, but here for safeguard
+      Alert.showWithFade( "You have already guessed the letter " +letter+ ".", "error" );
       return;
     }
 
@@ -84,13 +84,13 @@ var Hangman = {
       Hangman.prevGuess.correct = true;
       Hangman.correctLetters.push( letter );
       Hangman.numCorrectGuesses += 1;
-      Alert.show( "Letter " +letter.toUpperCase()+ " was a correct guess!", "success" );
+      Alert.showWithFade( letter.toUpperCase()+ " is in the word!", "success" );
       Hangman.els.blanks.children().eq( letterIndex ).html( letter );
     } else {
       Hangman.prevGuess.correct = false;
       Hangman.incorrectLetters.push( letter );
       Hangman.numIncorrectGuesses += 1;
-      Alert.show( "Incorrect. Letter " +letter.toUpperCase()+ " is not in the word.", "error" );
+      Alert.showWithFade( letter.toUpperCase()+ " is not in the word.", "error" );
     }
 
     Hangman.updateBoard();

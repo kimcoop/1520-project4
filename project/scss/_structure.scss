@@ -6,8 +6,8 @@ html, body {
 
 body {
   @extend %font;
-  // background: $primary-dark;
   background: $light-grey;
+  background: $primary-dark;
 }
 
 * { 
@@ -45,7 +45,8 @@ footer {
 }
 
 .well {
-  background: $light;
+  @include border-radius( 8px );
+  background: $light-grey;
   border: 4px solid $primary;
 }
 
@@ -62,6 +63,7 @@ footer {
 $letter-width: 40px;
 $letter-height: 35px;
 $num-guesses-height: 70px;
+$prev-guesses-height: 8em;
 
 .guess-area {
   position: relative;
@@ -69,11 +71,12 @@ $num-guesses-height: 70px;
     text-align: center;
     min-height: $num-guesses-height;
     &:first-child {
+      padding-top: 1em;
       padding-bottom: 2em;
     }
     &:last-child {
       padding-top: 2em;
-      border-top: 2px solid $primary;
+      border-top: 3px solid $primary;
     }
     .num-incorrect-guesses, .num-correct-guesses {
       @extend %font-secondary;
@@ -87,13 +90,11 @@ $num-guesses-height: 70px;
     text-transform: uppercase;
     letter-spacing: 1.5em;
     line-height: 3em;
+    min-height: $prev-guesses-height;
   } 
   .new-guesses {
     @extend %font-secondary;
     font-size: 1.8em;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0;
     .letter {
       @include border-radius( 50% );
       width: $letter-width;
@@ -124,6 +125,8 @@ $num-guesses-height: 70px;
 $blank-width: 40px;
 $blank-height: 50px;
 $blank-margin: 5px;
+$alert-width: 250px;
+$alert-layer: 10;
 
 #blanks {
   @extend %justified;
@@ -143,5 +146,21 @@ $blank-margin: 5px;
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+#alert {
+  @include box-shadow( 1px 1px 5px 3px $faded );
+  position: absolute;
+  top: 2em;
+  left: 5em;
+  width: $alert-width;
+  z-index: $alert-layer;
+  padding: 2em 2em 2em 1em;
+  &.alert-error {
+    border: 4px solid $error-color;
+  }
+  &.alert-success {
+    border: 4px solid $success-color;
   }
 }

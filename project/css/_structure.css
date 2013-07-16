@@ -41,6 +41,7 @@ html, body {
 
 body {
   background: #ecf0f1;
+  background: #071c71;
 }
 
 * {
@@ -80,7 +81,10 @@ footer {
 }
 
 .well {
-  background: white;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #ecf0f1;
   border: 4px solid #2484de;
 }
 
@@ -102,11 +106,12 @@ footer {
   min-height: 70px;
 }
 .guess-area .num-guesses:first-child {
+  padding-top: 1em;
   padding-bottom: 2em;
 }
 .guess-area .num-guesses:last-child {
   padding-top: 2em;
-  border-top: 2px solid #2484de;
+  border-top: 3px solid #2484de;
 }
 .guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses {
   display: block;
@@ -117,12 +122,10 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1.5em;
   line-height: 3em;
+  min-height: 8em;
 }
 .guess-area .new-guesses {
   font-size: 1.8em;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0;
 }
 .guess-area .new-guesses .letter {
   -webkit-border-radius: 50%;
@@ -168,4 +171,22 @@ footer {
 }
 #blanks .blank:last-child {
   margin-right: 0;
+}
+
+#alert {
+  -moz-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 2em;
+  left: 5em;
+  width: 250px;
+  z-index: 10;
+  padding: 2em 2em 2em 1em;
+}
+#alert.alert-error {
+  border: 4px solid rgba(185, 74, 72, 0.6);
+}
+#alert.alert-success {
+  border: 4px solid #468847;
 }

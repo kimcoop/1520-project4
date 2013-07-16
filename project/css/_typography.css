@@ -1,3 +1,13 @@
+h3 {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-family: "Rock Salt", arial;
+  font-size: 1.2em;
+}
+
 .big {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
@@ -11,7 +21,6 @@
 
 h1, h2, h3, h4 {
   font-weight: normal;
-  letter-spacing: -1px;
   color: #4312ae;
 }
 h1 small, h2 small, h3 small, h4 small {
@@ -25,7 +34,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3em;
+  color: #ffb300;
+  font-size: 3em !important;
 }
 
 h2 {
@@ -34,6 +44,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 h4 {
@@ -45,7 +56,7 @@ p {
   word-wrap: break-word;
 }
 
-.text-primary, h1, h2 {
+.text-primary {
   color: #2484de;
 }
 
@@ -61,7 +72,7 @@ p {
   color: rgba(185, 74, 72, 0.6);
 }
 .strikethrough:nth-child(3):before {
-  top: 0em;
+  top: -0.2em;
 }
 .strikethrough:nth-child(4):before {
   left: 0.3em;

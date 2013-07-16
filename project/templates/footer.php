@@ -35,6 +35,13 @@
 
     $('form').on( 'submit', function(e) {
       e.preventDefault();
+    });
+
+    $('.close').on( 'click', function(e) {
+      console.log('close cliked');
+      e.preventDefault();
+      parentClass = $(this).data( 'parent' );
+      $(this).parent( '.'+parentClass ).slideUp();
     })
 
     $('.start-new-round').on( 'click', function(e) {
