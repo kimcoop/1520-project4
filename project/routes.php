@@ -9,6 +9,9 @@
       $json[ 'word'] = $word->word;
       echo json_encode( $json );
       break;
+    case "quit": // TODO show stats etc
+      echo json_encode(' quit' );
+      break;
   }
 
   if ( $_GET['action'] == 'logout' ) {

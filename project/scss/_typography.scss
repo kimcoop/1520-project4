@@ -3,7 +3,7 @@
 h1, h2, h3, h4 {
   font-weight: normal;
   letter-spacing: -1px;
-  color: $secondary;
+  color: $secondary-A;
   small {
     color: $medium-grey;
   }
@@ -11,14 +11,13 @@ h1, h2, h3, h4 {
 
 h1, h2, h3 {
   // @extend .font-secondary;
-  color: $dark-grey;
+  color: $secondary-B;
   margin: 0;
   line-height: 0.8em;
 }
 
 h1, h2 {
   @extend .text-primary;
-  font-family: $lobster !important;
 }
 
 h1 {

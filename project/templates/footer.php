@@ -55,14 +55,12 @@
       });
     });
 
-    $('#guess-form').on( 'submit', function(e) {
-      e.preventDefault();
-      letter = $('input[name="letter"]').val();
-      if ( !!letter ) 
+    $('.letter').on( 'click', function() {
+      letter = $(this).text();
+      console.log(' guessing letter ' + letter );
+      if ( !$(this).hasClass( 'disabled' ))
         Hangman.guessLetter( letter );
-      else
-        Alert.show( "Please enter a letter.", "error" );
-      $('input[name="letter"]').val( '' );
+      $(this).addClass( 'disabled' );
     })
 
   });

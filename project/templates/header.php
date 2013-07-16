@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Source+Sans+Pro:300,900|Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Source+Sans+Pro:300,900|Rock+Salt' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -21,17 +21,7 @@
 
   <header>
     <div class="container nav-container">
-      <ul class="nav nav-pills pull-right">
-        <li class="">
-          <a href="">Test</a>
-        </li>
-        <li>
-          <a href="">Logout</a>
-        </li>
-      </ul>
-      <h3 class="title muted">
-        <a href="">Hangman</a>
-      </h3>
+      <h3 class="title">Hangman</h3>
     </div><!-- .container -->
   </header>
 

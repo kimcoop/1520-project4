@@ -1,18 +1,24 @@
 @import "mixins";
 
-$font-family: 'Droid Sans', arial;
+$font-primary: 'Droid Sans', arial;
 $normal: 14px;
 $font-secondary: "Source Sans Pro",helvetica,sans-serif;
-$lobster: 'Lobster', arial;
+$rock-salt: 'Rock Salt', arial;
 
-$color: #555;
-$primary: rgb(66, 184, 221); // light blue
-$secondary: #007d9a;
-$primary-focus: $secondary;
-$super-light-grey: #f3f3f3;
-$light-grey: #efefef;
+$color: #666;
+// $primary: #1533AD;
+// $primary: #08c;
+$primary: #2484de;
+$primary-dark: #071C71;
+$secondary-A: #4312AE;
+$secondary-B: #FFDB00; // yellow
+$complementary: #FFB300;
+
+$light-grey: rgb(236, 240, 241);
 $medium-grey: #ddd;
-$dark-grey: #777;
+$dark-grey: #333;
+$dark: $primary-dark;
+$light: #fff;
 
 $success-background: #dff0d8;
 $success-border: #d6e9c6;
@@ -28,15 +34,19 @@ $header-layer: 2;
 $alert-layer: 1;
 
 
-.font {
-  font-family: $font-family;
+%font {
+  font-family: $font-primary;
   font-size: $normal;
   color: $color;
 }
 
-.font-secondary {
+%font-secondary {
   font-family: $font-secondary;
   font-weight: 900;
+}
+
+%rock-salt {
+  font-family: $rock-salt;
 }
 
 .big {

@@ -1,12 +1,16 @@
-.font, body {
+body {
   font-family: "Droid Sans", arial;
   font-size: 14px;
-  color: #555555;
+  color: #666666;
 }
 
-.font-secondary {
+.guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
+}
+
+#blanks {
+  font-family: "Rock Salt", arial;
 }
 
 .big {
@@ -17,7 +21,7 @@
   list-style: none;
   margin: 0.2em 0 1em;
   padding: 0;
-  color: #777777;
+  color: #333333;
 }
 
 #blanks {
@@ -34,6 +38,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  background: #ecf0f1;
+}
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -42,9 +50,9 @@ html, body {
 
 #main {
   height: 100%;
+  padding: 2em 0;
   overflow: hidden;
-  margin-bottom: 20px;
-  margin: 100px auto -4em;
+  margin: 0 auto -4em;
 }
 
 .container {
@@ -59,15 +67,26 @@ footer, .push {
   height: 4em;
 }
 footer p, .push p {
-  color: #efefef;
+  color: #ecf0f1;
   margin: 0;
 }
 
 footer {
-  background: #65c5e3;
-  border-top: thick solid #efefef;
+  background: #4798e3;
+  border-top: thick solid #ecf0f1;
   line-height: 2em;
   vertical-align: middle;
+}
+
+.well {
+  background: white;
+  border: 4px solid #2484de;
+}
+
+#intro {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hangman-area, .guess-area {
@@ -79,11 +98,36 @@ footer {
 }
 .guess-area .previous-guesses {
   text-transform: uppercase;
+  letter-spacing: 0.5em;
 }
 .guess-area .new-guesses {
+  font-size: 1.8em;
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
+}
+.guess-area .new-guesses .letter {
+  -webkit-transition: 300ms all ease;
+  -moz-transition: 300ms all ease;
+  -o-transition: 300ms all ease;
+  transition: 300ms all ease;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 40px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  cursor: pointer;
+  margin: 0 2px 2px 0;
+}
+.guess-area .new-guesses .letter:last-child {
+  margin-right: 0;
+}
+.guess-area .new-guesses .letter:hover {
+  background: #ffdb00;
 }
 
 #blanks {
@@ -93,26 +137,31 @@ footer {
 #blanks .blank {
   width: 40px;
   height: 40px;
+  line-height: 40px;
   margin-right: 5px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  border-bottom: thick solid black;
+  border-bottom: thick solid #666666;
 }
 #blanks .blank:last-child {
   margin-right: 0;
 }
 
-.font, body {
+body {
   font-family: "Droid Sans", arial;
   font-size: 14px;
-  color: #555555;
+  color: #666666;
 }
 
-.font-secondary {
+.guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
+}
+
+#blanks {
+  font-family: "Rock Salt", arial;
 }
 
 .big {
@@ -123,7 +172,7 @@ footer {
   list-style: none;
   margin: 0.2em 0 1em;
   padding: 0;
-  color: #777777;
+  color: #333333;
 }
 
 #blanks {
@@ -139,20 +188,16 @@ footer {
 h1, h2, h3, h4 {
   font-weight: normal;
   letter-spacing: -1px;
-  color: #007d9a;
+  color: #4312ae;
 }
 h1 small, h2 small, h3 small, h4 small {
   color: #dddddd;
 }
 
 h1, h2, h3 {
-  color: #777777;
+  color: #ffdb00;
   margin: 0;
   line-height: 0.8em;
-}
-
-h1, h2 {
-  font-family: "Lobster", arial !important;
 }
 
 h1 {
@@ -177,18 +222,22 @@ p {
 }
 
 .text-primary, h1, h2 {
-  color: #42b8dd;
+  color: #2484de;
 }
 
-.font, body {
+body {
   font-family: "Droid Sans", arial;
   font-size: 14px;
-  color: #555555;
+  color: #666666;
 }
 
-.font-secondary {
+.guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
+}
+
+#blanks {
+  font-family: "Rock Salt", arial;
 }
 
 .big {
@@ -199,7 +248,73 @@ p {
   list-style: none;
   margin: 0.2em 0 1em;
   padding: 0;
-  color: #777777;
+  color: #333333;
+}
+
+#blanks {
+  text-align: justify;
+}
+#blanks:after {
+  content: "";
+  display: inline-block;
+  font-size: 0.01px;
+  width: 100%;
+}
+
+/*
+*= Forms 
+*/
+button, .btn, input[type="button"], input[type="reset"] {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 300ms all linear;
+  -moz-transition: 300ms all linear;
+  -o-transition: 300ms all linear;
+  transition: 300ms all linear;
+  background: 0;
+  border: 2px solid #2484de;
+  color: #ffb300;
+  background: #2484de;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  padding: 14px 20px;
+}
+button:hover, .btn:hover, input[type="button"]:hover, input[type="reset"]:hover {
+  background: #509de5;
+  color: #ffc233;
+}
+
+body {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #666666;
+}
+
+.guess-area .new-guesses, button, .btn, input[type="button"], input[type="reset"], header .nav-container .title {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+#blanks {
+  font-family: "Rock Salt", arial;
+}
+
+.big {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.2em 0 1em;
+  padding: 0;
+  color: #333333;
 }
 
 #blanks {
@@ -214,12 +329,11 @@ p {
 
 header {
   height: 80px;
-  width: 100%;
-  padding-bottom: 0;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  background: #6dc8e5;
-  background: #fff;
-  border-bottom: thick solid #f3f3f3;
+}
+header .nav-container .title {
+  color: #2484de;
+  height: inherit !important;
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: center;
 }

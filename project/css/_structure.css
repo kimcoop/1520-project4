@@ -1,12 +1,16 @@
-.font, body {
+body {
   font-family: "Droid Sans", arial;
   font-size: 14px;
-  color: #555555;
+  color: #666666;
 }
 
-.font-secondary {
+.guess-area .new-guesses {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
+}
+
+#blanks {
+  font-family: "Rock Salt", arial;
 }
 
 .big {
@@ -17,7 +21,7 @@
   list-style: none;
   margin: 0.2em 0 1em;
   padding: 0;
-  color: #777777;
+  color: #333333;
 }
 
 #blanks {
@@ -34,6 +38,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  background: #ecf0f1;
+}
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -42,9 +50,9 @@ html, body {
 
 #main {
   height: 100%;
+  padding: 2em 0;
   overflow: hidden;
-  margin-bottom: 20px;
-  margin: 100px auto -4em;
+  margin: 0 auto -4em;
 }
 
 .container {
@@ -59,15 +67,26 @@ footer, .push {
   height: 4em;
 }
 footer p, .push p {
-  color: #efefef;
+  color: #ecf0f1;
   margin: 0;
 }
 
 footer {
-  background: #65c5e3;
-  border-top: thick solid #efefef;
+  background: #4798e3;
+  border-top: thick solid #ecf0f1;
   line-height: 2em;
   vertical-align: middle;
+}
+
+.well {
+  background: white;
+  border: 4px solid #2484de;
+}
+
+#intro {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hangman-area, .guess-area {
@@ -79,11 +98,36 @@ footer {
 }
 .guess-area .previous-guesses {
   text-transform: uppercase;
+  letter-spacing: 0.5em;
 }
 .guess-area .new-guesses {
+  font-size: 1.8em;
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
+}
+.guess-area .new-guesses .letter {
+  -webkit-transition: 300ms all ease;
+  -moz-transition: 300ms all ease;
+  -o-transition: 300ms all ease;
+  transition: 300ms all ease;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 40px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  cursor: pointer;
+  margin: 0 2px 2px 0;
+}
+.guess-area .new-guesses .letter:last-child {
+  margin-right: 0;
+}
+.guess-area .new-guesses .letter:hover {
+  background: #ffdb00;
 }
 
 #blanks {
@@ -93,12 +137,13 @@ footer {
 #blanks .blank {
   width: 40px;
   height: 40px;
+  line-height: 40px;
   margin-right: 5px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  border-bottom: thick solid black;
+  border-bottom: thick solid #666666;
 }
 #blanks .blank:last-child {
   margin-right: 0;

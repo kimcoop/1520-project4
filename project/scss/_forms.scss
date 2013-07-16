@@ -6,3 +6,22 @@
 
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 }
+
+button, .btn, input[type="button"], input[type="reset"] {
+  @include border-radius( 6px );
+  @extend %font-secondary;
+  @include text-shadow( none );
+  @include box-shadow( none );
+  @include transition( 300ms all linear );
+  background: 0;
+  border: 2px solid $primary;
+  color: $complementary;
+  background: $primary;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  padding: 14px 20px;
+  &:hover {
+    background: lighten( $primary, 10% );
+    color: lighten( $complementary, 10% );
+  }
+}

@@ -5,7 +5,9 @@ html, body {
 }
 
 body {
-  @extend .font;
+  @extend %font;
+  // background: $primary-dark;
+  background: $light-grey;
 }
 
 * { 
@@ -14,9 +16,9 @@ body {
 
 #main {
   height: 100%;
+  padding: 2em 0;
   overflow: hidden;
-  margin-bottom: 20px;
-  margin: ($header-height + 20px) auto -4em;
+  margin: 0 auto -4em;
 }
 
 .container {
@@ -42,19 +44,55 @@ footer {
   vertical-align: middle;
 }
 
+.well {
+  background: $light;
+  border: 4px solid $primary;
+}
+
+#intro {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .hangman-area, .guess-area {
   min-height: $hangman-height;
 }
+
+$letter-width: 40px;
+$letter-height: 35px;
 
 .guess-area {
   position: relative;
   .previous-guesses {
     text-transform: uppercase;
+    letter-spacing: 0.5em;
   } 
   .new-guesses {
+    @extend %font-secondary;
+    font-size: 1.8em;
     position: absolute;
     bottom: 0;
     margin-bottom: 0;
+    .letter {
+      @include transition( 300ms all ease );
+      @include border-radius( 50% );
+      // @extend %rock-salt;
+      width: $letter-width;
+      height: $letter-height;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: $letter-height;
+      cursor: pointer;
+      margin: 0 2px 2px 0;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        background: $secondary-B;
+      }
+    }
   }
 }
 
@@ -63,17 +101,19 @@ $blank-margin: 5px;
 
 #blanks {
   @extend %justified;
+  @extend %rock-salt;
   width: 100%;
   margin: 1em auto 0;
   .blank {
     width: $blank-size;
     height: $blank-size;
+    line-height: $blank-size;
     margin-right: $blank-margin;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-    border-bottom: thick solid black;
+    border-bottom: thick solid $color;
     &:last-child {
       margin-right: 0;
     }

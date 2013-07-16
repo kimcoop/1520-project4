@@ -1,14 +1,3 @@
-.font {
-  font-family: "Droid Sans", arial;
-  font-size: 14px;
-  color: #555555;
-}
-
-.font-secondary {
-  font-family: "Source Sans Pro", helvetica, sans-serif;
-  font-weight: 900;
-}
-
 .big {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
@@ -17,20 +6,20 @@
   list-style: none;
   margin: 0.2em 0 1em;
   padding: 0;
-  color: #777777;
+  color: #333333;
 }
 
 a:link {
-  color: #42b8dd;
+  color: #2484de;
 }
 a:visited {
-  color: #208fb2;
+  color: #185d9e;
 }
 a:active {
-  color: #208fb2;
+  color: #185d9e;
 }
 a:hover, a:focus {
-  color: #208fb2;
+  color: #185d9e;
   text-decoration: underline;
 }
 a:active, a:hover {

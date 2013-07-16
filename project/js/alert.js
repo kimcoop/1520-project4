@@ -8,6 +8,5 @@ var Alert = {
     Alert.textEl.html( message );
     Alert.el.fadeIn();
   }
-
-    
+   
 }

@@ -1,5 +1,6 @@
 var Hangman = {
   els: {
+    intro: $('#intro'),
     board: $('#hangman'),
     blanks: $('#blanks'),
     prevGuesses: $('.previous-guesses'),
@@ -35,7 +36,9 @@ var Hangman = {
     console.debug( 'newRound: word is ' + word );
     Hangman.numGuesses = 0;
     Hangman.word = word;
-    Hangman.els.board.show();
+    Hangman.els.intro.fadeOut( 'slow', function() {
+      Hangman.els.board.fadeIn();
+    });
     Hangman.updateBoard();
   },
 
@@ -92,7 +95,7 @@ var Hangman = {
     // OR if player has guessed wrong 7 times
     gameLost = Hangman.numIncorrectGuesses == Hangman.wrongGuessesLimit;
     if ( gameWon ) Hangman.gameWon();
-    else if ( gameLost ) Hangman.lostGame();
+    else if ( gameLost ) Hangman.gameLost();
   },
 
   gameWon: function() {

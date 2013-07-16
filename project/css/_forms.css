@@ -1,10 +1,4 @@
-.font {
-  font-family: "Droid Sans", arial;
-  font-size: 14px;
-  color: #555555;
-}
-
-.font-secondary {
+button, .btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
@@ -17,9 +11,35 @@
   list-style: none;
   margin: 0.2em 0 1em;
   padding: 0;
-  color: #777777;
+  color: #333333;
 }
 
 /*
 *= Forms 
 */
+button, .btn, input[type="button"], input[type="reset"] {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 300ms all linear;
+  -moz-transition: 300ms all linear;
+  -o-transition: 300ms all linear;
+  transition: 300ms all linear;
+  background: 0;
+  border: 2px solid #2484de;
+  color: #ffb300;
+  background: #2484de;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  padding: 14px 20px;
+}
+button:hover, .btn:hover, input[type="button"]:hover, input[type="reset"]:hover {
+  background: #509de5;
+  color: #ffc233;
+}
