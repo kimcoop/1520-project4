@@ -2,16 +2,11 @@
   
   require_once( 'functions.php' ); // includes session_start()
 
-  function get_random_word() {
-    return "fan";
-  }
-
-
   switch ( $_GET['action'] ) {
     case "start_new_round":
-      $word = get_random_word();
+      $word = Word::get_random();
       $json = array();
-      $json[ 'word'] = $word;
+      $json[ 'word'] = $word->word;
       echo json_encode( $json );
       break;
   }

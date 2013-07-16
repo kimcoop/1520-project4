@@ -15,23 +15,24 @@
     <div class="span5 guess-area">
       <div class="row">
         <div class="well span5">
-          <h3>
+          <p>
             Correct Guesses:&nbsp;
             <span class="num-correct-guesses"></span>
-          </h3>
-          <h3>
+          </p>
+          <p>
             Incorrect Guesses:&nbsp;
             <span class="num-incorrect-guesses"></span>
-          </h3>
+          </p>
+          <p>Previous Guesses:&nbsp;</p>
           <div class="previous-guesses"></div>
         </div>
       </div>
       <div class="row">
         <div class="well span5 new-guesses">
           <form action="routes.php" method="post" id="guess-form">
-            <input name="letter" type="text" placeholder="Letter" />
+            <input class="input-block-level" name="letter" type="text" placeholder="Letter" maxlength=1 />
             <br>
-            <button type="submit" class="btn">Guess!</button>
+            <button type="submit" class="btn btn-block">Guess!</button>
           </form>
         </div>
       </div>

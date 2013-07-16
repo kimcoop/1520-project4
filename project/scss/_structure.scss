@@ -63,6 +63,7 @@ $blank-margin: 5px;
 
 #blanks {
   @extend %justified;
+  width: 100%;
   margin: 1em auto 0;
   .blank {
     width: $blank-size;

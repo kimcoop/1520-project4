@@ -23,7 +23,6 @@
   <script type="text/javascript">
   $(function() {
     $('a').on( 'click', function(e) {
-      console.log('link clicked');
       e.preventDefault();
       $.ajax({
         url: this.href,
@@ -51,9 +50,7 @@
         type: "GET",
         data: {},
       }).done( function( data ) {
-        // data is word for now
         data = JSON.parse( data );
-        console.debug( data );
         Hangman.newRound( data.word );
       });
     });

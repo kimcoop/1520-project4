@@ -27,6 +27,16 @@
     *
     */
 
+    public static function get_random() {
+      $words = Word::find_all();
+      $word = $words[ array_rand( $words ) ];
+      return $word;
+    }
+
+    public static function find_all() {
+      return parent::find_all( 'words' );
+    }
+
     public static function find_by_id( $id ) {
       return parent::where_one( 'words', "id='$id'" );
     }

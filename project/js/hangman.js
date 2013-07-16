@@ -13,7 +13,7 @@ var Hangman = {
   numCorrectGuesses: 0,
   numIncorrectGuesses: 0,
   correctLetters: [],
-  wrongLetters: [],
+  incorrectLetters: [],
   wrongGuessesLimit: 7,
 
   reset: function() {
@@ -23,7 +23,7 @@ var Hangman = {
     Hangman.numCorrectGuesses = 0;
     Hangman.numIncorrectGuesses = 0;
     Hangman.correctLetters = [];
-    Hangman.wrongLetters = [];
+    Hangman.incorrectLetters = [];
     Hangman.els.prevGuesses.html( '' );
     Hangman.els.blanks.html( '' );
     Hangman.updateBoard();
@@ -58,20 +58,30 @@ var Hangman = {
 
   guessLetter: function( letter ) {
     letter = letter.toLowerCase();
+    letterAlreadyGuessed = Hangman.correctLetters.indexOf( letter ) > -1 || Hangman.incorrectLetters.indexOf( letter ) > -1;
+
+    if ( letterAlreadyGuessed ) {
+      Alert.show( "You have already guessed the letter " +letter+ ".", "error" );
+      return;
+    }
+
     Hangman.numGuesses += 1;
     Hangman.prevGuess = letter;
+
     var letterIndex = Hangman.word.indexOf( letter ),
       letterInWord =  letterIndex > -1;
+
     if ( letterInWord ) {
       Hangman.correctLetters.push( letter );
       Hangman.numCorrectGuesses += 1;
       Alert.show( "Correct guess!", "success" );
       Hangman.els.blanks.children().eq( letterIndex ).html( letter );
     } else {
-      Hangman.wrongLetters.push( letter );
+      Hangman.incorrectLetters.push( letter );
       Hangman.numIncorrectGuesses += 1;
       Alert.show( "Incorrect guess.", "error" );
     }
+
     Hangman.updateBoard();
     Hangman.checkForGameEnd();
   },

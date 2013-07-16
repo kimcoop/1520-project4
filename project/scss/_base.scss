@@ -60,7 +60,7 @@ $alert-layer: 1;
   text-align: justify;
   &:after {
     content: "";
-    display: block;
+    display: inline-block;
     font-size: 0.01px;
     width: 100%;
   }
