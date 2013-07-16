@@ -74,12 +74,12 @@ var Hangman = {
     if ( letterInWord ) {
       Hangman.correctLetters.push( letter );
       Hangman.numCorrectGuesses += 1;
-      Alert.show( "Correct guess!", "success" );
+      Alert.show( "Letter " +letter.toUpperCase()+ " was a correct guess!", "success" );
       Hangman.els.blanks.children().eq( letterIndex ).html( letter );
     } else {
       Hangman.incorrectLetters.push( letter );
       Hangman.numIncorrectGuesses += 1;
-      Alert.show( "Incorrect guess.", "error" );
+      Alert.show( "Incorrect. Letter " +letter.toUpperCase()+ " is not in the word.", "error" );
     }
 
     Hangman.updateBoard();
