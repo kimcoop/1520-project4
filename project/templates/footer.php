@@ -40,6 +40,12 @@
 
     $('.start-new-round').on( 'click', function(e) {
       e.preventDefault();
+      if ( Hangman.gameInProgress ) {
+        quitCurrentGame = confirm( 'Quit current game?' );
+        // make sure the user wants to terminate the current game if there is one in progress
+        if ( !quitCurrentGame )
+          return;
+      }
       $.ajax({
         url: this.href,
         type: "GET",

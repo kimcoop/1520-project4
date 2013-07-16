@@ -7,6 +7,7 @@ var Hangman = {
     numIncorrectGuesses: $('.num-incorrect-guesses')
   },
   word: undefined,
+  gameInProgress: false,
   prevGuess: '',
   numGuesses: 0,
   numCorrectGuesses: 0,
@@ -30,6 +31,7 @@ var Hangman = {
 
   newRound: function( word ) {
     Hangman.reset();
+    Hangman.gameInProgress = true;
     console.debug( 'newRound: word is ' + word );
     Hangman.numGuesses = 0;
     Hangman.word = word;
