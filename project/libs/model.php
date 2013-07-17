@@ -22,7 +22,7 @@
         case "words":
           return "Word";
         default:
-          return "User";
+          return "Score";
       }
     }
 

@@ -24,6 +24,17 @@ var Stats = {
       return Math.round( 100 * Stats.roundsWon / Stats.roundsPlayed );
   },
 
+  getScore: function() {
+    // [(number_of_letters_in_word - number_of_times_you_guess) / (number_of_times_you_guess) * 100 ] + 100
+  },
+
+  saveScore: function( score ) {
+    $.ajax({
+      url: Routes.saveScore,
+      
+    })
+  },
+
   reset: function() {
     Stats.roundsPlayed = 0;
     Stats.roundsWon = 0;

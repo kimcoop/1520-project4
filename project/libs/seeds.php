@@ -13,18 +13,19 @@
     echo "Resetting tables in database...<br/>";
 
     DB::run( "DROP TABLE IF EXISTS users" );
+    DB::run( "DROP TABLE IF EXISTS scores" );
     DB::run( "DROP TABLE IF EXISTS words" );
     
   }
 
   function create_tables() {
 
-    // $users_sql = "CREATE TABLE users(
-    //   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    //   email varchar(255) NOT NULL,
-    //   password varchar(255) NOT NULL,
-    //   UNIQUE INDEX unique_email( email )
-    //   )";
+    $scores_sql = "CREATE TABLE scores(
+      id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+      username varchar(255) NOT NULL,
+      score varchar(255) NOT NULL,
+      UNIQUE INDEX unique_username( username )
+      )";
 
     $words_sql = "CREATE TABLE words(
       id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -32,7 +33,7 @@
       UNIQUE INDEX unique_words( word )
       )";
   
-    // DB::run( $users_sql );
+    DB::run( $scores_sql );
     DB::run( $words_sql );
     
   }

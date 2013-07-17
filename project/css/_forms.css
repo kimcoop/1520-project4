@@ -51,6 +51,7 @@ button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-weight: normal;
   letter-spacing: 0.2em;
   padding: 14px 20px;
+  margin-top: 2px;
 }
 button:hover, .btn:hover, a.btn:hover, input[type="button"]:hover, input[type="reset"]:hover {
   background: #509de5;

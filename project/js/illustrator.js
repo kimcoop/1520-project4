@@ -20,5 +20,6 @@ var Illustrator = {
 
   reset: function() {
     Illustrator.els.hangmanParts.hide();
+    Illustrator.numPartsDisplayed = 0;
   }
 }

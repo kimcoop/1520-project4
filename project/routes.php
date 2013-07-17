@@ -9,8 +9,15 @@
       $json[ 'word'] = $word->word;
       echo json_encode( $json );
       break;
-    case "quit":
-      echo json_encode(' quit' );
+    case "save_score":
+      if ( Score::create( $_POST['score'], $_POST['username'] )) {
+        $message = "Scored saved successfully.";
+        $status = 200;
+      } else {
+        $message = "Error saving score.";
+        $status = 500;
+      }
+      echo json_encode( array("message"=>$message, "status"=>$status );
       break;
   }
 

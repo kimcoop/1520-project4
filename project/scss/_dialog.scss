@@ -33,6 +33,11 @@ $faded-dark: rgba(0, 0, 0, 0.8);
     text-align: center;
     background: $faded-dark;
     border: 4px solid $primary;
+    .icon {
+      @extend %close;
+      color: $primary;
+      &:hover { color: lighten( $primary, 25% ); }
+    }
   }
 }
 

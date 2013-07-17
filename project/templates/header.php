@@ -29,7 +29,4 @@
 
   <div class="container">
     <div id="main">
-      <div id="alert" class="alert" style="display:none">
-        <button type="button" class="close" data-parent="alert">&times;</button>
-        <div class="alert-text"></div>
-      </div>
+      <?php include('templates/alert.php') ?>

@@ -20,13 +20,9 @@ function was_posted( $name ) {
   return isset( $_POST[$name] );
 }
 
-function current_game() {
-  return $_SESSION['game'];
+function sort_by_score( $a, $b ) {
+  if ( $a->score == $b->score ) return 0;
+  return ( $a->score < $b->score ) ? -1 : 1;
 }
-
-function set_current_game( $game ) {
-  $_SESSION['game'] = $game;
-}
-
 
 ?>

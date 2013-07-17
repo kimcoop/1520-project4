@@ -27,6 +27,10 @@ h1, h2 {
   font-size: 3em !important;
 }
 
+h1 {
+  color: #6f83d6;
+}
+
 h2 {
   font-size: 2.7em !important;
   margin-bottom: 1em;

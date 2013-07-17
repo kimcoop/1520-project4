@@ -35,6 +35,20 @@ $alert-layer: 1;
 
 $faded: rgba( 0, 0, 0, 0.4 );
 
+$narrow-width: 500px;
+
+// letters
+$letter-width: 40px;
+$letter-height: 35px;
+$num-guesses-height: 70px;
+$prev-guesses-height: 8em;
+
+$blank-width: 40px;
+$blank-height: 50px;
+$blank-margin: 5px;
+$alert-width: 250px;
+$alert-layer: 10;
+
 %font {
   font-family: $font-primary;
   font-size: $normal;
@@ -57,10 +71,14 @@ $faded: rgba( 0, 0, 0, 0.4 );
   font-size: 1.5em;
 }
 
-%transparent {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
+%close {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  @include text-shadow( none );
+  opacity: 1;
 }
 
 %justified {

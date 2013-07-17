@@ -36,6 +36,7 @@ button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-weight: normal;
   letter-spacing: 0.2em;
   padding: 14px 20px;
+  margin-top: 2px;
   &:hover {
     background: lighten( $primary, 10% );
     color: lighten( $complementary, 10% );

@@ -45,7 +45,6 @@ var Hangman = {
     Hangman.getWord( function( word ) {
       Hangman.word = word;
       Hangman.gameInProgress = true;
-      console.debug( 'newRound: word is ' + Hangman.word );
       Hangman.numGuesses = 0;
       Hangman.updateBoard();
     });
@@ -131,8 +130,10 @@ var Hangman = {
     gameWon = Hangman.numCorrectGuesses == Hangman.word.length; // game ends if all letters have been guessed
     gameLost = Hangman.numIncorrectGuesses == Hangman.wrongGuessesLimit; // OR if player has guessed wrong 7 times
 
-    if ( gameWon || gameLost ) 
+    if ( gameWon || gameLost ) {
       Hangman.gameInProgress = false;
+      App.disableGuessing();
+    }
 
     if ( gameWon ) Hangman.gameWon();
     else if ( gameLost ) Hangman.gameLost();

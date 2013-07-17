@@ -28,26 +28,12 @@
   
   <script type="text/javascript">
   $(function() {
-    // $('a').on( 'click', function(e) {
-    //   e.preventDefault();
-    //   $.ajax({
-    //     url: this.href,
-    //     type: "GET",
-    //     data: {},
-    //   }).done( function( data ) {
-    //     console.debug( data );
-    //   });
-    // });
-
-    // $('form').on( 'submit', function(e) {
-    //   e.preventDefault();
-    // });
 
     $('.close').on( 'click', function(e) {
-      console.log('close cliked');
       e.preventDefault();
-      parentClass = $(this).data( 'parent' );
-      $(this).parent( '.'+parentClass ).slideUp();
+      el = $(this);
+      parentSelector = el.data( 'parent' );
+      el.parents( parentSelector ).fadeOut();
     });
 
     $('.start-new-round').on( 'click', function(e) {
@@ -66,22 +52,10 @@
       App.quit();
     });
 
-    $('.letter').on( 'click', function() {
-      letter = $(this).text();
-      console.log(' guessing letter ' + letter );
-      if ( !$(this).hasClass( 'disabled' ))
-        Hangman.guessLetter( letter );
-      $(this).addClass( 'disabled' );
-    });
-
-    $(document).ajaxComplete(function(event, xhr, settings) {
-      console.log(' ajax complete');
-      console.debug( xhr );
-      console.debug( settings);
-      if ( settings.url === "ajax/test.html" ) {
-        $( ".log" ).text( "Triggered ajaxComplete handler. The result is " + xhr.responseHTML );
-      }
-    });
+    $('.view-scores').on( 'click', function(e) {
+      e.preventDefault();
+      App.viewScores();
+    })
 
   });
   </script>

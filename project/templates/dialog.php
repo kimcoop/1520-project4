@@ -1,5 +1,6 @@
 <div id="dialog-container" style="display:none">
   <div class="dialog">
+    <i class="icon icon-remove-circle close" data-parent="#dialog-container"></i>
     <h2>Game Over</h2>
 
     <h3 class="game-summary">You won!</h3>
@@ -20,8 +21,11 @@
     </div><!-- .stats -->
 
     <br>
+    <h3>You scored <span class="score"></span>.</h3>
+    <br>
 
     <div class="actions">
+      <a href="" class="btn view-scores">View Scores</a>&nbsp;
       <a href="" class="btn start-new-round">Play Again</a>&nbsp;
       <a href="" class="btn quit">Quit</a>
     </div>

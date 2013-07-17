@@ -14,10 +14,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {
@@ -57,6 +69,11 @@ body {
   height: auto !important;
   height: 100%;
   margin: 0 auto;
+}
+
+.container-narrow {
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 footer, .push {
@@ -148,6 +165,12 @@ footer {
 .guess-area .new-guesses .letter.disabled:hover {
   background: transparent;
 }
+.guess-area .new-guesses .letter.prohibited {
+  cursor: not-allowed;
+}
+.guess-area .new-guesses .letter.prohibited:hover {
+  background: transparent;
+}
 
 #blanks {
   position: absolute;
@@ -174,15 +197,16 @@ footer {
 }
 
 #alert {
-  -moz-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);
-  position: absolute;
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: fixed;
   top: 2em;
-  left: 5em;
+  left: 1.5em;
   width: 250px;
   z-index: 10;
-  padding: 2em 2em 2em 1em;
+  padding: 1em;
 }
 #alert.alert-error {
   border: 4px solid rgba(185, 74, 72, 0.6);
@@ -207,10 +231,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {
@@ -240,6 +276,10 @@ h1, h2, h3 {
 h1, h2 {
   color: #ffb300;
   font-size: 3em !important;
+}
+
+h1 {
+  color: #6f83d6;
 }
 
 h2 {
@@ -322,10 +362,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {
@@ -384,10 +436,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {
@@ -448,6 +512,7 @@ button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-weight: normal;
   letter-spacing: 0.2em;
   padding: 14px 20px;
+  margin-top: 2px;
 }
 button:hover, .btn:hover, a.btn:hover, input[type="button"]:hover, input[type="reset"]:hover {
   background: #509de5;
@@ -470,10 +535,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {
@@ -513,10 +590,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {
@@ -555,6 +644,12 @@ body {
   background: rgba(0, 0, 0, 0.8);
   border: 4px solid #2484de;
 }
+#dialog-container .dialog .icon {
+  color: #2484de;
+}
+#dialog-container .dialog .icon:hover {
+  color: #93c2ef;
+}
 
 .stats {
   margin: 50px 0 20px;
@@ -587,10 +682,22 @@ body {
   font-size: 1.2em;
 }
 
-.stats .stat .stat-type {
+#alert, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
 }
 
 #blanks {

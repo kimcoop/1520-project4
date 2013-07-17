@@ -7,19 +7,36 @@ var App = {
     gameSummary: $('.game-summary'),
     roundsWon: $('.rounds-won'),
     roundsPlayed: $('.rounds-played'),
-    winPercentage: $('.win-percentage')
+    winPercentage: $('.win-percentage'),
+    availableLetters: $('.letter'),
   },
   fadeTimeIn: 400,
   fadeTimeOut: 400,
-  fadeSlow: 1800,
+  fadeSlow: 1100,
 
   play: function() {
     App.clearGameOver();
     Illustrator.reset();
     Hangman.newRound();
+    App.enableGuessing();
     App.els.intro.fadeOut( App.fadeTimeOut, function() {
       App.els.board.fadeIn();
     });
+  },
+
+  enableGuessing: function() {
+    App.els.availableLetters
+      .removeClass( 'prohibited' )
+      .on( 'click', function() {
+        letter = $(this).text();
+        if ( !$(this).hasClass( 'disabled' ))
+          Hangman.guessLetter( letter );
+        $(this).addClass( 'disabled' );
+      });
+  },
+
+  disableGuessing: function() {
+    App.els.availableLetters.addClass( 'prohibited' ).off( 'click' );
   },
 
   clearGameOver: function() {
@@ -48,6 +65,13 @@ var App = {
     App.els.board.fadeOut( App.fadeTimeOut, function() {
       App.els.intro.fadeIn();
     });
+  },
+
+  viewScores: function() {
+    elToFadeOut = App.els.intro.is(':visible') ? App.els.intro : App.els.board;
+    elToFadeOut.fadeOut( App.fadeTimeOut, function() {
+      App.els.scores.fadeIn();
+    });   
   }
    
 }
