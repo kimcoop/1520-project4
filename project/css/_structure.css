@@ -161,6 +161,9 @@ footer {
 #blanks .blank:last-child {
   margin-right: 0;
 }
+#blanks .blank .revealed {
+  color: #2484de;
+}
 
 #alert {
   -moz-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.4);

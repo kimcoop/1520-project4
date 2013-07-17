@@ -1,6 +1,7 @@
 <div id="dialog-container" style="display:none">
   <div class="dialog">
     <h2>Game Over</h2>
+
     <h3 class="game-summary">You won!</h3>
       
     <div class="stats">

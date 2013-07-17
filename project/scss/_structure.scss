@@ -143,9 +143,8 @@ $alert-layer: 10;
     vertical-align: middle;
     text-transform: uppercase;
     border-bottom: thick solid $color;
-    &:last-child {
-      margin-right: 0;
-    }
+    &:last-child { margin-right: 0; }
+    .revealed { color: $primary; }
   }
 }
 

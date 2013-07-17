@@ -12,15 +12,14 @@ var Alert = {
     Alert.els.alert.removeClass( 'alert-success alert-error' );
     Alert.els.alert.addClass( 'alert-' + type );
     Alert.els.alertText.html( message );
-    Alert.els.alert.stop().fadeIn( Alert.fadeTimeIn, function() {
+    Alert.els.alert.stop( true, true ).fadeIn( Alert.fadeTimeIn, function() {
       $(this).fadeOut( Alert.fadeTimeOut );
     });
   },
 
   showGameOver: function( gameStatus, word ) {
-    console.log( 'alert: gameStatus: ' + gameStatus );
     if ( gameStatus == 'lost' ) {
-      Alert.els.gameSummary.html( "You lost this game. The word was " + word + "." );
+      Alert.els.gameSummary.html( "You lost this game. The word was <span class='text-primary'>" + word + ".</span>" );
     }
     Alert.els.gameOver.fadeIn();
   },

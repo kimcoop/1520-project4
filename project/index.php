@@ -26,7 +26,7 @@
         <div class="row">
           <div class="span5"><h3>Available Letters</h3></div>
         </div>
-        <div class="row new-guesses">
+        <div class="row new-guesses available-letters">
           <div class="well span5">
             <span class="letter">A</span>
             <span class="letter">B</span>

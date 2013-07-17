@@ -5,7 +5,8 @@ var Hangman = {
     blanks: $('#blanks'),
     prevGuesses: $('.previous-guesses'),
     numCorrectGuesses: $('.num-correct-guesses'),
-    numIncorrectGuesses: $('.num-incorrect-guesses')
+    numIncorrectGuesses: $('.num-incorrect-guesses'),
+    availableLetters: $('.letter')
   },
   word: undefined,
   gameInProgress: false,
@@ -43,10 +44,12 @@ var Hangman = {
   },
 
   updateBoard: function() {
-    if ( Hangman.numGuesses > 0 )
+    if ( Hangman.numGuesses > 0 ) {
       prevGuessMarkup = Hangman.prevGuess.correct ? Hangman.prevGuess.letter : "<span class='strikethrough'>" + Hangman.prevGuess.letter + "</span>";
-    else
+    } else {
       prevGuessMarkup = '';
+      Hangman.els.availableLetters.removeClass( 'disabled' );
+    }
     Hangman.els.prevGuesses.html( Hangman.els.prevGuesses.html() + prevGuessMarkup );
 
     if ( !!Hangman.word && Hangman.els.blanks.html() == "" ) // set up blanks only on init if we have a word
@@ -114,7 +117,17 @@ var Hangman = {
   },
 
   gameLost: function() {
+    Hangman.revealWord();
     Alert.showGameOver( 'lost', Hangman.word );
+  },
+
+  revealWord: function() {
+    for ( var i=0; i < Hangman.word.length; i++ ) {
+      if ( Hangman.els.blanks.children().eq( i ).html() == "" ) {
+        correctLetter = Hangman.word[ i ];
+        Hangman.els.blanks.children().eq( i ).html( "<span class='revealed'>" +correctLetter+ "</span>" );
+      }
+    }
   }
 
     
