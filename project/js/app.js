@@ -8,8 +8,10 @@ var App = {
     roundsWon: $('.rounds-won'),
     roundsPlayed: $('.rounds-played'),
     winPercentage: $('.win-percentage'),
-    availableLetters: $('.letter'),
+    availableLetters: $('.letter')
   },
+  username: '',
+  currentView: $('#intro'), // for init
   fadeTimeIn: 400,
   fadeTimeOut: 400,
   fadeSlow: 1100,
@@ -21,6 +23,7 @@ var App = {
     App.enableGuessing();
     App.els.intro.fadeOut( App.fadeTimeOut, function() {
       App.els.board.fadeIn();
+      App.currentView = App.els.board;
     });
   },
 
@@ -62,16 +65,17 @@ var App = {
     App.clearGameOver();
     Hangman.quit();
     Stats.reset();
-    App.els.board.fadeOut( App.fadeTimeOut, function() {
+    App.currentView.fadeOut( App.fadeTimeOut, function() {
       App.els.intro.fadeIn();
+      App.currentView = App.els.intro;
     });
   },
 
   viewScores: function() {
-    elToFadeOut = App.els.intro.is(':visible') ? App.els.intro : App.els.board;
-    elToFadeOut.fadeOut( App.fadeTimeOut, function() {
+    App.currentView.fadeOut( App.fadeTimeOut, function() {
       App.els.scores.fadeIn();
-    });   
+      App.currentView = App.els.scores;
+    }); 
   }
    
 }

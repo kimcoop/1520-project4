@@ -486,6 +486,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   display: inline-block;
   border: 1px solid #ccc;
 }
+input[type="text"].input-error, input[type="password"].input-error, input[type="datetime"].input-error, input[type="datetime-local"].input-error, input[type="date"].input-error, input[type="month"].input-error, input[type="time"].input-error, input[type="week"].input-error, input[type="number"].input-error, input[type="email"].input-error, input[type="url"].input-error, input[type="search"].input-error, input[type="tel"].input-error, input[type="color"].input-error, .uneditable-input.input-error {
+  border: thin solid rgba(185, 74, 72, 0.6);
+}
 
 form {
   margin-top: 5px;

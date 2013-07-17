@@ -17,6 +17,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   padding: .5em .6em;
   display: inline-block;
   border: 1px solid #ccc;
+  &.input-error {
+    border: thin solid $error-color;
+  }
 }
 
 form {

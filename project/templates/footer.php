@@ -38,12 +38,26 @@
 
     $('.start-new-round').on( 'click', function(e) {
       e.preventDefault();
+
+      if ( !App.username ) {
+        if ( $('.username').is(':visible') ) {
+          if ( $('.username').val().trim() == '' ) { // if no username is in system, and user can enter it
+            Alert.showWithFade( 'Please enter your username.', 'error' );
+            $('.username').addClass( 'input-error' ).focus();
+            return;
+          } else {
+            App.username = $('.username').val().trim();
+          }
+        }
+      }
+
       if ( Hangman.gameInProgress ) {
         quitCurrentGame = confirm( 'Quit current game?' );
         // make sure the user wants to terminate the current game if there is one in progress
         if ( !quitCurrentGame )
           return;
       }
+      $('.username').removeClass( 'input-error' );
       App.play();
     });
 

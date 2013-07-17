@@ -22,7 +22,7 @@
             <th>Score</th>
             <th>User</th>
           </thead>
-          <tbody class="scores-tbody">
+          <tbody>
             <?php foreach( $scores as $rank=>$user_score ): ?>
             <tr>
               <td><?php echo $rank ?></td>
@@ -38,6 +38,7 @@
 
       <?php endif; ?>
 
-    </div>
+      <a href="" class="btn btn-block quit">Home</a>
+    </div><!-- .well -->
   </div>
 </div>
