@@ -3,8 +3,10 @@
   <div id="intro" class="screen">
     <div class="well">
       <h3 class="text-primary">Ready to play?</h3>
-      <input autofocus type="text" class="username input-block-level" placeholder="Username" />
-      <a href="" class="btn btn-block start-new-round">Start New Round</a>
+      <form class="username-form">
+        <input autofocus type="text" class="username input-block-level" placeholder="Username" />
+        <button type="submit" class="btn btn-block start-new-round">Start New Round</button>
+      </form>
       <a href="" class="btn btn-block view-scores">View Scores</a>
     </div>
   </div>

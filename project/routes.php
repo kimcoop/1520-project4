@@ -17,7 +17,7 @@
         $message = "Error saving score.";
         $status = 500;
       }
-      echo json_encode( array("message"=>$message, "status"=>$status );
+      echo json_encode( array("message"=>$message, "status"=>$status ));
       break;
   }
 

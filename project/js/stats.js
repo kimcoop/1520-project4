@@ -29,10 +29,10 @@ var Stats = {
   },
 
   saveScore: function( score ) {
-    $.ajax({
-      url: Routes.saveScore,
+    // $.ajax({
+    //   url: Routes.saveScore,
       
-    })
+    // })
   },
 
   reset: function() {
