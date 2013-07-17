@@ -86,9 +86,13 @@ var Hangman = {
     if ( letterInWord ) {
       Hangman.prevGuess.correct = true;
       Hangman.correctLetters.push( letter );
-      Hangman.numCorrectGuesses += 1;
       Alert.showWithFade( letter.toUpperCase()+ " is in the word!", "success" );
-      Hangman.els.blanks.children().eq( letterIndex ).html( letter );
+      indices = Hangman.getLetterIndices( letter );
+      for ( var i=0; i < indices.length; i++ ) { // iterate to capture all indices where letter matches
+        Hangman.numCorrectGuesses += 1;
+        letterIndex = indices[ i ];
+        Hangman.els.blanks.children().eq( letterIndex ).html( letter );
+      }
     } else {
       Hangman.prevGuess.correct = false;
       Hangman.incorrectLetters.push( letter );
@@ -100,11 +104,24 @@ var Hangman = {
     Hangman.checkForGameEnd();
   },
 
+  getLetterIndices: function( letter ) {
+    var startIndex = 0, 
+      index = -1, 
+      indices = [];
+
+    while ( Hangman.word.indexOf( letter, startIndex ) > -1 ) {
+      index = Hangman.word.indexOf( letter, startIndex );
+      indices.push( index );
+      startIndex += index + 1;
+    }
+    return indices;
+  },
+
   checkForGameEnd: function() {
-    // game ends if all letters have been guessed
-    gameWon = Hangman.numCorrectGuesses == Hangman.word.length;
-    // OR if player has guessed wrong 7 times
-    gameLost = Hangman.numIncorrectGuesses == Hangman.wrongGuessesLimit;
+    
+    gameWon = Hangman.numCorrectGuesses == Hangman.word.length; // game ends if all letters have been guessed
+    gameLost = Hangman.numIncorrectGuesses == Hangman.wrongGuessesLimit; // OR if player has guessed wrong 7 times
+
     if ( gameWon || gameLost ) 
       Hangman.gameInProgress = false;
 
