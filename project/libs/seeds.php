@@ -19,13 +19,12 @@
 
   function create_tables() {
 
-    $users_sql = "CREATE TABLE users(
-      id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-      user_id varchar(255) NOT NULL,
-      email varchar(255) NOT NULL,
-      password varchar(255) NOT NULL,
-      UNIQUE INDEX unique_email( email )
-      )";
+    // $users_sql = "CREATE TABLE users(
+    //   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    //   email varchar(255) NOT NULL,
+    //   password varchar(255) NOT NULL,
+    //   UNIQUE INDEX unique_email( email )
+    //   )";
 
     $words_sql = "CREATE TABLE words(
       id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -33,7 +32,7 @@
       UNIQUE INDEX unique_words( word )
       )";
   
-    DB::run( $users_sql );
+    // DB::run( $users_sql );
     DB::run( $words_sql );
     
   }

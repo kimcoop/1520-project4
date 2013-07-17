@@ -49,7 +49,7 @@ body {
   height: 100%;
   padding: 2em 0;
   overflow: hidden;
-  margin: 0 auto -4em;
+  margin: 0 auto -2em;
 }
 
 .container {
@@ -61,7 +61,7 @@ body {
 
 footer, .push {
   clear: both;
-  height: 4em;
+  height: 2em;
 }
 footer p, .push p {
   color: #ecf0f1;
@@ -69,9 +69,9 @@ footer p, .push p {
 }
 
 footer {
-  background: #4798e3;
-  border-top: thick solid #ecf0f1;
   line-height: 2em;
+  height: 2em;
+  padding-bottom: 3em;
   vertical-align: middle;
 }
 
@@ -544,9 +544,9 @@ body {
   -moz-border-radius: 10px;
   border-radius: 10px;
   overflow: hidden;
-  margin: 95px auto 0;
+  margin: 82.5px auto 0;
   padding: 4em 2em 0;
-  height: 460px;
+  height: 410px;
   width: 650px;
   position: relative;
   text-align: center;

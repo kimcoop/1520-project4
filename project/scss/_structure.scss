@@ -18,7 +18,7 @@ body {
   height: 100%;
   padding: 2em 0;
   overflow: hidden;
-  margin: 0 auto -4em;
+  margin: 0 auto -2em;
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
 
 footer, .push {
   clear: both;
-  height: 4em;
+  height: 2em;
   p {
     color: $light-grey;
     margin: 0;
@@ -38,9 +38,9 @@ footer, .push {
 }
 
 footer {
-  background: lighten( $primary, 8% );
-  border-top: thick solid $light-grey;
   line-height: 2em;
+  height: 2em;
+  padding-bottom: 3em;
   vertical-align: middle;
 }
 

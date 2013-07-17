@@ -20,19 +20,13 @@ function was_posted( $name ) {
   return isset( $_POST[$name] );
 }
 
-function current_user() {
-  return $_SESSION['user'];
+function current_game() {
+  return $_SESSION['game'];
 }
 
-function is_logged_in() {
-  return isset( $_SESSION['user'] );
+function set_current_game( $game ) {
+  $_SESSION['game'] = $game;
 }
 
-// function sort_by_term( $a, $b ) {
-//   if ( $a->term == $b->term )
-//     return 0;
-//   else
-//     return ( $a->term < $b->term ? -1 : 1 );
-// }
 
 ?>

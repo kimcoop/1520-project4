@@ -138,12 +138,18 @@ var Hangman = {
   },
 
   gameWon: function() {
+    Stats.upRoundsWon( 1 );
     App.showGameOver( 'won', Hangman.word );
   },
 
   gameLost: function() {
     Hangman.revealWord();
+    Stats.upRoundsLost( 1 );
     App.showGameOver( 'lost', Hangman.word );
+  },
+
+  quit: function() {
+    Hangman.gameInProgress = false;
   },
 
   revealWord: function() {

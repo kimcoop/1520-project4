@@ -23,6 +23,7 @@
   <script src="js/alert.js"></script>
   <script src="js/routes.js"></script>
   <script src="js/hangman.js"></script>
+  <script src="js/stats.js"></script>
   
   <script type="text/javascript">
   $(function() {
@@ -37,9 +38,9 @@
     //   });
     // });
 
-    $('form').on( 'submit', function(e) {
-      e.preventDefault();
-    });
+    // $('form').on( 'submit', function(e) {
+    //   e.preventDefault();
+    // });
 
     $('.close').on( 'click', function(e) {
       console.log('close cliked');
@@ -70,6 +71,15 @@
       if ( !$(this).hasClass( 'disabled' ))
         Hangman.guessLetter( letter );
       $(this).addClass( 'disabled' );
+    });
+
+    $(document).ajaxComplete(function(event, xhr, settings) {
+      console.log(' ajax complete');
+      console.debug( xhr );
+      console.debug( settings);
+      if ( settings.url === "ajax/test.html" ) {
+        $( ".log" ).text( "Triggered ajaxComplete handler. The result is " + xhr.responseHTML );
+      }
     });
 
   });
