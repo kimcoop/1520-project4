@@ -20,7 +20,6 @@
       </div>
     </div><!-- .stats -->
 
-    <br>
     <h3>You scored <span class="score text-primary"></span> for this round.</h3>
     <br>
 

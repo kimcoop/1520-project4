@@ -35,10 +35,8 @@
 
     $('.username-form').on( 'submit', function(e) {
       e.preventDefault();
-      if (checkForUsername())
-        startNewRound();
-      else
-        return false;
+      if (checkForUsername()) startNewRound();
+      else return false;
     });
 
     $('.close').on( 'click', function(e) {
@@ -50,10 +48,14 @@
 
     $('.start-new-round').on( 'click', function(e) {
       e.preventDefault();
-      if (checkForUsername())
-        startNewRound();
-      else
-        return false;
+      startNewRound();
+    });
+
+    $('#intro .start-new-round').on( 'click', function(e) {
+      // on login, check for username
+      e.preventDefault();
+      if (checkForUsername()) startNewRound();
+      else return false;
     });
 
     $('.quit').on( 'click', function(e) {
@@ -88,6 +90,15 @@
             App.username = $('.username').val().trim();
           }
         }
+      } else { // if App already has a user, but there's a new user trying to play
+        if ( $('.username').val().trim() !== '' )
+          App.username = $('.username').val().trim();
+        else {
+          Alert.showWithFade( 'Please enter your username.', 'error' );
+          $('.username').addClass( 'input-error' ).focus();
+          return false;
+        }
+
       }
       return true;
     }

@@ -351,6 +351,8 @@ p {
 }
 
 .own-score {
+  font-size: 0.6em;
+  vertical-align: middle;
   color: #6f83d6;
 }
 
