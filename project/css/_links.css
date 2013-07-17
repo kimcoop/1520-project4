@@ -1,14 +1,23 @@
-a:link {
-  color: #2484de;
+/*
+*= Links
+*/
+a {
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -o-transition: 300ms all;
+  transition: 300ms all;
 }
-a:visited {
-  color: #185d9e;
+a.inline {
+  display: inline-block;
+}
+a:link {
+  color: #66a9e8;
 }
 a:active {
-  color: #185d9e;
+  color: #93c2ef;
 }
 a:hover, a:focus {
-  color: #185d9e;
+  color: #93c2ef;
   text-decoration: underline;
 }
 a:active, a:hover {

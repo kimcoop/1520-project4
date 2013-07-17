@@ -51,6 +51,14 @@ p {
   color: #2484de;
 }
 
+.text-complementary {
+  color: #ffb300;
+}
+
+.text-primary-light {
+  color: #6f83d6;
+}
+
 .strikethrough {
   position: relative;
 }

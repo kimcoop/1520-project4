@@ -1,18 +1,25 @@
+
 @import "base";
+/*
+*= Links
+*/
 
 a {
-
+  @include transition( 300ms all );
+  &.inline {
+    display: inline-block;
+  }
   &:link {
-    color: $primary;
+    color: lighten( $primary, 15% );
   }
   &:visited {
-    color: darken( $primary, 15% );
+    // color: lighten( $primary, 25% );
   }
   &:active {
-    color: darken( $primary, 15% );
+    color: lighten( $primary, 25% );
   }
   &:hover, &:focus {
-    color: darken( $primary, 15% );
+    color: lighten( $primary, 25% );
     text-decoration: underline;
   }
   &:active, &:hover {

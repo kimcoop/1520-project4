@@ -46,6 +46,14 @@ p {
   color: $primary;
 }
 
+.text-complementary {
+  color: $complementary;
+}
+
+.text-primary-light {
+  color: $primary-light;
+}
+
 .strikethrough {
   position: relative;
   &:before {

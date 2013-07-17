@@ -4,7 +4,7 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, input[type="button"], input[type="reset"] {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
@@ -84,7 +84,7 @@ footer {
 }
 
 #intro {
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
 }
@@ -195,7 +195,7 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, input[type="button"], input[type="reset"] {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
@@ -264,6 +264,14 @@ p {
   color: #2484de;
 }
 
+.text-complementary {
+  color: #ffb300;
+}
+
+.text-primary-light {
+  color: #6f83d6;
+}
+
 .strikethrough {
   position: relative;
 }
@@ -302,7 +310,69 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, input[type="button"], input[type="reset"] {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.guess-area .previous-guesses, #blanks, h1, h2 {
+  font-family: "Rock Salt", arial;
+  font-size: 1.2em;
+}
+
+.stats .stat .stat-type {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+#blanks {
+  text-align: justify;
+}
+#blanks:after {
+  content: "";
+  display: inline-block;
+  font-size: 0.01px;
+  width: 100%;
+}
+
+/*
+*= Links
+*/
+a {
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -o-transition: 300ms all;
+  transition: 300ms all;
+}
+a.inline {
+  display: inline-block;
+}
+a:link {
+  color: #66a9e8;
+}
+a:active {
+  color: #93c2ef;
+}
+a:hover, a:focus {
+  color: #93c2ef;
+  text-decoration: underline;
+}
+a:active, a:hover {
+  outline: none;
+}
+a img {
+  border: none;
+  vertical-align: middle;
+}
+
+body {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #666666;
+}
+
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
@@ -331,7 +401,31 @@ body {
 /*
 *= Forms 
 */
-button, .btn, input[type="button"], input[type="reset"] {
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  -webkit-transition: 0.3s linear border;
+  -moz-transition: 0.3s linear border;
+  -o-transition: 0.3s linear border;
+  transition: 0.3s linear border;
+  -moz-box-shadow: inset 0 1px 3px #dddddd;
+  -webkit-box-shadow: inset 0 1px 3px #dddddd;
+  box-shadow: inset 0 1px 3px #dddddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 0.9em;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: baseline;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+form {
+  margin-top: 5px;
+}
+
+button, .btn, a.btn, input[type="button"], input[type="reset"] {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -353,7 +447,7 @@ button, .btn, input[type="button"], input[type="reset"] {
   letter-spacing: 0.2em;
   padding: 14px 20px;
 }
-button:hover, .btn:hover, input[type="button"]:hover, input[type="reset"]:hover {
+button:hover, .btn:hover, a.btn:hover, input[type="button"]:hover, input[type="reset"]:hover {
   background: #509de5;
   color: #ffc233;
 }
@@ -364,7 +458,7 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, input[type="button"], input[type="reset"] {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }
@@ -407,7 +501,7 @@ body {
   color: #666666;
 }
 
-.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, input[type="button"], input[type="reset"] {
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 900;
 }

@@ -4,10 +4,26 @@
 *= Forms 
 */
 
+$input-height: 40px;
+
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  @include transition( 0.3s linear border );
+  @include box-shadow(inset 0 1px 3px #ddd);
+  @include border-radius( 4px );
+  height: $input-height;
+  font-size: 0.9em;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: baseline;
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
 }
 
-button, .btn, input[type="button"], input[type="reset"] {
+form {
+  margin-top: 5px;
+}
+
+button, .btn, a.btn, input[type="button"], input[type="reset"] {
   @include border-radius( 6px );
   @extend %font-secondary;
   @include text-shadow( none );
