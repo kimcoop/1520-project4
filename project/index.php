@@ -1,13 +1,14 @@
 <?php include('templates/header.php') ?>
 
-  <div id="intro" style="display:none">
-    <p class="big">Welcome! Are you ready to play?</p>
+  <div id="intro">
+    <h3>Welcome! Ready to get started?</h3>
+    <br>
     <a href="" class="btn btn-block start-new-round">Start New Round</a>
     <br>
     <br>
   </div>
 
-  <div id="hangman" style="display:none1">
+  <div id="hangman" style="display:none">
     <div class="row row-gameboard">
       <div class="well span7 hangman-area">
         <img src="images/hangman-base.png" />

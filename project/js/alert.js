@@ -1,9 +1,7 @@
 var Alert = {
   els: {
     alert: $('#alert'),
-    alertText: $('.alert-text'),
-    gameOver: $('#dialog-container'),
-    gameSummary: $('.game-summary')
+    alertText: $('.alert-text')
   },
   fadeTimeIn: 400,
   fadeTimeOut: 1800,
@@ -17,14 +15,7 @@ var Alert = {
     });
   },
 
-  showGameOver: function( gameStatus, word ) {
-    if ( gameStatus == 'lost' ) {
-      Alert.els.gameSummary.html( "You lost this game. The word was <span class='text-primary'>" + word + ".</span>" );
-    }
-    Alert.els.gameOver.fadeIn();
-  },
-
-  begone: function( selector ) {
+  dismiss: function( selector ) {
     $( selector ).fadeOut();
   }
    

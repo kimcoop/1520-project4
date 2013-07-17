@@ -1,7 +1,5 @@
 var Hangman = {
   els: {
-    intro: $('#intro'),
-    board: $('#hangman'),
     blanks: $('#blanks'),
     prevGuesses: $('.previous-guesses'),
     numCorrectGuesses: $('.num-correct-guesses'),
@@ -31,16 +29,26 @@ var Hangman = {
     Hangman.updateBoard();
   },
 
-  newRound: function( word ) {
-    Hangman.reset();
-    Hangman.gameInProgress = true;
-    console.debug( 'newRound: word is ' + word );
-    Hangman.numGuesses = 0;
-    Hangman.word = word;
-    Hangman.els.intro.fadeOut( 'slow', function() {
-      Hangman.els.board.fadeIn();
+  getWord: function( callback ) {
+    $.ajax({
+      url: Routes.startNewRound,
+      type: "GET",
+      data: {},
+    }).done( function( data ) {
+      data = JSON.parse( data );
+      callback( data.word );
     });
-    Hangman.updateBoard();
+  },
+
+  newRound: function() {
+    Hangman.reset();
+    Hangman.getWord( function( word ) {
+      Hangman.word = word;
+      Hangman.gameInProgress = true;
+      console.debug( 'newRound: word is ' + Hangman.word );
+      Hangman.numGuesses = 0;
+      Hangman.updateBoard();
+    });
   },
 
   updateBoard: function() {
@@ -130,12 +138,12 @@ var Hangman = {
   },
 
   gameWon: function() {
-    Alert.showGameOver( 'won', Hangman.word );
+    App.showGameOver( 'won', Hangman.word );
   },
 
   gameLost: function() {
     Hangman.revealWord();
-    Alert.showGameOver( 'lost', Hangman.word );
+    App.showGameOver( 'lost', Hangman.word );
   },
 
   revealWord: function() {

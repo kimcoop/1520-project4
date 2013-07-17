@@ -19,6 +19,7 @@
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
+  <script src="js/app.js"></script>
   <script src="js/alert.js"></script>
   <script src="js/routes.js"></script>
   <script src="js/hangman.js"></script>
@@ -49,21 +50,18 @@
 
     $('.start-new-round').on( 'click', function(e) {
       e.preventDefault();
-      Alert.begone( '#dialog-container' );
       if ( Hangman.gameInProgress ) {
         quitCurrentGame = confirm( 'Quit current game?' );
         // make sure the user wants to terminate the current game if there is one in progress
         if ( !quitCurrentGame )
           return;
       }
-      $.ajax({
-        url: Routes.startNewRound,
-        type: "GET",
-        data: {},
-      }).done( function( data ) {
-        data = JSON.parse( data );
-        Hangman.newRound( data.word );
-      });
+      App.play();
+    });
+
+    $('.quit').on( 'click', function(e) {
+      e.preventDefault();
+      App.quit();
     });
 
     $('.letter').on( 'click', function() {
@@ -72,7 +70,7 @@
       if ( !$(this).hasClass( 'disabled' ))
         Hangman.guessLetter( letter );
       $(this).addClass( 'disabled' );
-    })
+    });
 
   });
   </script>
