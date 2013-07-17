@@ -31,6 +31,7 @@ input[type="text"].input-error, input[type="password"].input-error, input[type="
 
 form {
   margin-top: 5px;
+  margin-bottom: 0;
 }
 
 button, .btn, a.btn, input[type="button"], input[type="reset"] {

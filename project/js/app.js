@@ -72,6 +72,7 @@ var App = {
   },
 
   viewScores: function() {
+    App.clearGameOver();
     App.currentView.fadeOut( App.fadeTimeOut, function() {
       App.els.scores.fadeIn();
       App.currentView = App.els.scores;

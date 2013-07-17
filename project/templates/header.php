@@ -20,12 +20,11 @@
   <body>
   
 
-  <header>
-    <div class="container nav-container">
-      <h1 class="title">Ultimate Hangman</h1>
-    </div><!-- .container -->
+  <header class="row-fluid">
+    <div class="span12">
+      <h1 class="text-center title">Ultimate Hangman</h1>
+    </div>
   </header>
-
 
   <div class="container">
     <div id="main">
