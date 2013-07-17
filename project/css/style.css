@@ -346,6 +346,10 @@ p {
   top: -0.1em;
 }
 
+.own-score {
+  color: #6f83d6;
+}
+
 body {
   font-family: "Droid Sans", arial;
   font-size: 14px;

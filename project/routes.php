@@ -2,23 +2,50 @@
   
   require_once( 'functions.php' ); // includes session_start()
 
-  switch ( $_GET['action'] ) {
-    case "start_new_round":
-      $word = Word::get_random();
-      $json = array();
-      $json[ 'word'] = $word->word;
-      echo json_encode( $json );
-      break;
-    case "save_score":
-      if ( Score::create( $_POST['score'], $_POST['username'] )) {
-        $message = "Scored saved successfully.";
-        $status = 200;
-      } else {
-        $message = "Error saving score.";
-        $status = 500;
-      }
-      echo json_encode( array("message"=>$message, "status"=>$status ));
-      break;
-  }
+  define( "ROUNDS_NEW", "rounds_new" );
+  define( "SCORES_NEW", "scores_new" );
+  define( "SCORES_INDEX", "scores_index" );
+
+  define( "ERROR", 500 );
+  define( "OK", 200 );
+
+  if ( isset($_GET['action']) ):
+    switch ( $_GET['action'] ) {
+      case ROUNDS_NEW:
+        $word = Word::get_random();
+        $json = array();
+        $json[ 'word'] = $word->word;
+        echo json_encode( $json );
+        break;
+      case SCORES_INDEX:
+        $scores = Score::find_all();
+        usort( $scores, 'sort_by_points' );
+        echo json_encode( $scores );
+        break;
+    }
+    exit;
+  endif; // $_GET['action']
+
+  if ( isset($_POST['action']) ): 
+    switch ( $_POST['action'] ) {
+      case SCORES_NEW:
+        if ( Score::create( $_POST['points'], $_POST['username'] )) {
+          $message = "Scored saved successfully.";
+          $status = OK;
+        } else {
+          $message = "Error saving score.";
+          $status = ERROR;
+        }
+        echo json_encode( array("message"=>$message, "status"=>$status ));
+        exit;
+      default:
+        var_dump( $_POST);
+        break;
+    }
+    exit;
+  endif;
+
+  echo json_encode( array("message"=>"oops!", "status"=>ERROR, "post"=>$_POST, "get"=>$_GET ));
+  exit;
 
 ?>

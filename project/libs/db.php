@@ -5,9 +5,8 @@
 
     public function instance() {
       if ( self::$db == NULL ) 
-        // self::$db = new mysqli( $self::host, $self::user, $self::password, $self::name );
-        // self::$db = new mysqli( 'localhost', 'root', 'root', 'advisor-cloud' );
-        self::$db = new mysqli( 'localhost', 'CooperriderK', 'mac.limp', 'CooperriderK' );
+        self::$db = new mysqli( 'localhost', 'root', 'root', 'hangman' );
+        // self::$db = new mysqli( 'localhost', 'CooperriderK', 'mac.limp', 'CooperriderK' );
       return self::$db;
     }
 

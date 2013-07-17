@@ -25,6 +25,7 @@
   <script src="js/hangman.js"></script>
   <script src="js/stats.js"></script>
   <script src="js/illustrator.js"></script>
+  <script src="js/score.js"></script>
   
   <script type="text/javascript">
   $(function() {

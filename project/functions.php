@@ -17,12 +17,12 @@ function __autoload($class) {
 date_default_timezone_set( 'America/New_York' );
 
 function was_posted( $name ) {
-  return isset( $_POST[$name] );
+  return isset($_POST['action']) && $_POST['action'] == $name;
 }
 
-function sort_by_score( $a, $b ) {
-  if ( $a->score == $b->score ) return 0;
-  return ( $a->score < $b->score ) ? -1 : 1;
+function sort_by_points( $a, $b ) {
+  if ( $a->points == $b->points ) return 0;
+  return ( $a->points > $b->points ) ? -1 : 1;
 }
 
 ?>

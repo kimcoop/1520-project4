@@ -1,5 +1,8 @@
 var Routes = {
-  startNewRound: "routes.php?action=start_new_round",
-  userSignin: "routes.php?action=sign_in"
-  
+  root: "routes.php",
+  startNewRound: "routes.php?action=rounds_new",
+  scoresIndex: "routes.php?action=scores_index",
+  post: {
+    scoresNew: "scores_new",
+  }
 }

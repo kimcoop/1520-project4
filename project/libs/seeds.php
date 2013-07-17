@@ -22,8 +22,8 @@
 
     $scores_sql = "CREATE TABLE scores(
       id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+      points varchar(255) NOT NULL,
       username varchar(255) NOT NULL,
-      score varchar(255) NOT NULL,
       UNIQUE INDEX unique_username( username )
       )";
 

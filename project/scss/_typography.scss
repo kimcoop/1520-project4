@@ -72,3 +72,10 @@ p {
   &:nth-child(4) { &:before { @include transform( rotate(-10deg) ); left: 0.3em; }}
   &:nth-child(5) { &:before { left: 0.1em; top: -0.1em; }}
 }
+
+.own-score {
+  color: $primary-light;
+  .icon-star {
+    // color: $secondary-B; 
+  }
+}
