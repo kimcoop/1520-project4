@@ -1,6 +1,13 @@
-<div class="row row-gameboard">
+<div class="row">
   <div class="well span7 hangman-area">
-    <img src="images/hangman-base.png" />
+    <img src="images/base.png" class="base" />
+    <img src="images/hat.png" class="hat hangman-body" />
+    <img src="images/head.png" class="head hangman-body" />
+    <img src="images/left-arm.png" class="left-arm hangman-body" />
+    <img src="images/right-arm.png" class="right-arm hangman-body" />
+    <img src="images/left-leg.png" class="left-leg hangman-body" />
+    <img src="images/right-leg.png" class="right-leg hangman-body" />
+    <img src="images/body.png" class="torso hangman-body" />
     <div id="blanks"></div>
   </div><!-- .hangman-area -->
 

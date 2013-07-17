@@ -150,6 +150,8 @@ footer {
 }
 
 #blanks {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   margin: 1em auto 0;
 }
@@ -567,4 +569,81 @@ body {
   margin-bottom: 5px;
   font-size: 4em;
   color: inherit;
+}
+
+body {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #666666;
+}
+
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.guess-area .previous-guesses, #blanks, h1, h2 {
+  font-family: "Rock Salt", arial;
+  font-size: 1.2em;
+}
+
+.stats .stat .stat-type {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+#blanks {
+  text-align: justify;
+}
+#blanks:after {
+  content: "";
+  display: inline-block;
+  font-size: 0.01px;
+  width: 100%;
+}
+
+/*
+*= Hangman
+*/
+.hangman-area {
+  position: relative;
+}
+.hangman-area .base {
+  position: absolute;
+}
+.hangman-area .torso {
+  position: absolute;
+  left: 22em;
+  top: 9.5em;
+}
+.hangman-area .hat {
+  position: absolute;
+  left: 17em;
+  top: 3em;
+}
+.hangman-area .head {
+  position: absolute;
+  left: 19.8em;
+  top: 5em;
+}
+.hangman-area .left-arm {
+  position: absolute;
+  left: 19em;
+  top: 10em;
+}
+.hangman-area .right-arm {
+  position: absolute;
+  left: 22.5em;
+  top: 10em;
+}
+.hangman-area .left-leg {
+  position: absolute;
+  left: 20em;
+  top: 16em;
+}
+.hangman-area .right-leg {
+  position: absolute;
+  left: 23em;
+  top: 15em;
 }

@@ -1,0 +1,47 @@
+@import "base";
+
+/*
+*= Hangman
+*/
+
+.hangman-area {
+  position: relative;
+  .base {
+    position: absolute;
+  }
+  .torso {
+    position: absolute;
+    left: 22em;
+    top: 9.5em;
+  }
+  .hat {
+    position: absolute;
+    left: 17em;
+    top: 3em;
+  }
+  .head {
+    position: absolute;
+    left: 19.8em;
+    top: 5em;
+  }
+  .left-arm {
+    position: absolute;
+    left: 19em;
+    top: 10em;
+  }
+  .right-arm {
+    position: absolute;
+    left: 22.5em;
+    top: 10em;
+  }
+  .left-leg {
+    position: absolute;
+    left: 20em;
+    top: 16em;
+  }
+  .right-leg {
+    position: absolute;
+    left: 23em;
+    top: 15em;
+  }
+}

@@ -105,6 +105,7 @@ var Hangman = {
       Hangman.prevGuess.correct = false;
       Hangman.incorrectLetters.push( letter );
       Hangman.numIncorrectGuesses += 1;
+      Illustrator.displayNextBodyPart();
       Alert.showWithFade( letter.toUpperCase()+ " is not in the word.", "error" );
     }
 

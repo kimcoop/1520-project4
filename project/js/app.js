@@ -11,12 +11,14 @@ var App = {
   },
   fadeTimeIn: 400,
   fadeTimeOut: 400,
+  fadeSlow: 1800,
 
   play: function() {
     App.clearGameOver();
+    Illustrator.reset();
+    Hangman.newRound();
     App.els.intro.fadeOut( App.fadeTimeOut, function() {
       App.els.board.fadeIn();
-      Hangman.newRound();
     });
   },
 
@@ -36,7 +38,7 @@ var App = {
     App.els.roundsPlayed.text( Stats.roundsPlayed );
     App.els.winPercentage.text( Stats.getWinPercentage().toString() + "%" );
 
-    App.els.gameOver.fadeIn();
+    App.els.gameOver.fadeIn( App.fadeSlow );
   },
 
   quit: function() {
