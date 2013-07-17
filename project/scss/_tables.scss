@@ -1,1 +1,25 @@
 @import "base";
+
+/*
+*= Tables
+*/
+
+.scores-table {
+  @extend %big;
+  
+  th {
+    text-align: center;
+  }
+  .scores-body {
+    tr:first-child {
+      td {
+        color: $error-color;
+       }
+    }
+    tr {
+      td { 
+        text-align: center;
+      }
+    }
+  }
+}

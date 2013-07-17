@@ -1,18 +1,13 @@
 <div class="row-fluid">
+  <div class="well span12 scores-container"></div><!-- .well -->
+<div class="row-fluid">
   <div class="span12">
-    <h3>Scores</h3>
+    <a href="" class="btn btn-block quit">Home</a>
   </div>
 </div>
+</div>
 <div class="row-fluid">
-  <div class="well span12 scores-container">
-    <table class="table scores-table">
-      <thead>
-        <th>Rank</th>
-        <th>Score</th>
-        <th>User</th>
-      </thead>
-      <tbody class="scores-body"></tbody>
-    </table>
-    <a href="" class="btn btn-block quit">Home</a>
-  </div><!-- .well -->
+  <div class="span12">
+    <p class="text-justify">*Scores are calculated based on number of letters in the word and number of guesses taken (max 7 incorrect).</p>
+  </div>
 </div>

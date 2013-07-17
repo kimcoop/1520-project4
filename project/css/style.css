@@ -14,7 +14,7 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -79,9 +79,9 @@ body {
 footer, .push {
   clear: both;
   height: 2em;
+  color: #2484de;
 }
 footer p, .push p {
-  color: #ecf0f1;
   margin: 0;
 }
 
@@ -231,7 +231,7 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -302,6 +302,10 @@ p {
   word-wrap: break-word;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .text-primary {
   color: #2484de;
 }
@@ -366,7 +370,7 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -440,7 +444,7 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -543,7 +547,64 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+#dialog-container .dialog .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+#blanks {
+  text-align: justify;
+}
+#blanks:after {
+  content: "";
+  display: inline-block;
+  font-size: 0.01px;
+  width: 100%;
+}
+
+/*
+*= Tables
+*/
+.scores-table th {
+  text-align: center;
+}
+.scores-table .scores-body tr:first-child td {
+  color: rgba(185, 74, 72, 0.6);
+}
+.scores-table .scores-body tr td {
+  text-align: center;
+}
+
+body {
+  font-family: "Droid Sans", arial;
+  font-size: 14px;
+  color: #666666;
+}
+
+.guess-area .num-guesses .num-incorrect-guesses, .guess-area .num-guesses .num-correct-guesses, .guess-area .new-guesses, h3, h4, button, .btn, a.btn, input[type="button"], input[type="reset"] {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.guess-area .previous-guesses, #blanks, h1, h2 {
+  font-family: "Rock Salt", arial;
+  font-size: 1.2em;
+}
+
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -598,7 +659,7 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -690,7 +751,7 @@ body {
   font-size: 1.2em;
 }
 
-#alert, .stats .stat .stat-type {
+#alert, .scores-table, .stats .stat .stat-type {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5em;

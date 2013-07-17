@@ -36,10 +36,8 @@ body {
 footer, .push {
   clear: both;
   height: 2em;
-  p {
-    color: $light-grey;
-    margin: 0;
-  }
+  color: $primary;
+  p { margin: 0; }
 }
 
 footer {

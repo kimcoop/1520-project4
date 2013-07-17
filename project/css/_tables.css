@@ -1,0 +1,18 @@
+.scores-table {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+/*
+*= Tables
+*/
+.scores-table th {
+  text-align: center;
+}
+.scores-table .scores-body tr:first-child td {
+  color: rgba(185, 74, 72, 0.6);
+}
+.scores-table .scores-body tr td {
+  text-align: center;
+}

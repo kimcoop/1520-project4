@@ -133,7 +133,7 @@ var Hangman = {
     if ( gameWon || gameLost ) {
       Hangman.gameInProgress = false;
       App.disableGuessing();
-      Score.calcAndSave();
+      Score.calcAndSave( Hangman.word, Hangman.numGuesses );
     }
 
     if ( gameWon ) Hangman.gameWon();

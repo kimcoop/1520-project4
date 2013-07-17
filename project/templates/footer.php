@@ -26,6 +26,9 @@
   <script src="js/stats.js"></script>
   <script src="js/illustrator.js"></script>
   <script src="js/score.js"></script>
+  <script src="js/simple-template.js"></script>
+
+  <script type="text/html" id="scores_list_tmpl"><?php include( 'templates/scores_list.html'); ?></script>
   
   <script type="text/javascript">
   $(function() {

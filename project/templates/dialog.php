@@ -21,7 +21,7 @@
     </div><!-- .stats -->
 
     <br>
-    <h3>You scored <span class="score"></span>.</h3>
+    <h3>You scored <span class="score text-primary"></span> for this round.</h3>
     <br>
 
     <div class="actions">

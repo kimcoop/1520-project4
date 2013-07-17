@@ -67,9 +67,9 @@ body {
 footer, .push {
   clear: both;
   height: 2em;
+  color: #2484de;
 }
 footer p, .push p {
-  color: #ecf0f1;
   margin: 0;
 }
 

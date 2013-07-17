@@ -1,0 +1,34 @@
+<% if ( scores.length > 0 ) { %>
+
+  <table class="table scores-table table-hover">
+    <thead>
+      <th><h4 class="text-primary">Rank</h4></th>
+      <th><h4 class="text-primary">Score</h4></th>
+      <th><h4 class="text-primary">User</h4></th>
+    </thead>
+    <tbody class="scores-body">
+      <% for ( var i=0; i < scores.length; i++ ) { %>
+        <tr>
+          <td>
+            <% if ( i == 0 ) { %>
+              <i class="icon icon-trophy"></i>&nbsp;
+            <% } %>
+            <%= i + 1 %>
+          </td>
+          <td><%= Math.round(scores[ i ].points) %></td>
+          <td>
+            <%= scores[ i ].username %>
+            <% if ( scores[i].username == App.username ) { %>
+              <span class="own-score"><i class="icon icon-star"></i>&nbsp;you!</span>
+            <% } %>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+<% } else { %>
+
+  <p>No scores yet!</p>
+  
+<% } %>
