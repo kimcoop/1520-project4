@@ -5,7 +5,7 @@
       <div class="well span12">
         <h3 class="text-primary">Ready to play?</h3>
         <form class="username-form">
-          <input autofocus type="text" class="username input-block-level" placeholder="Username" />
+          <input autofocus type="text" class="username input-block-level" placeholder="Username" value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : ''; ?>"/>
           <button type="submit" class="btn btn-block start-new-round">Start New Round</button>
         </form>
         <a href="" class="btn btn-block view-scores">View Scores</a>

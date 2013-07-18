@@ -29,6 +29,8 @@
   if ( isset($_POST['action']) ): 
     switch ( $_POST['action'] ) {
       case SCORES_NEW:
+        $expire = time() + 60 * 60 * 24 * 30;
+        setcookie( "username", $_POST['username'], $expire ); // set cookie to what user passed in
         if ( Score::create( $_POST['points'], $_POST['username'] )) {
           $message = "Scored saved successfully.";
           $status = OK;
