@@ -85,6 +85,8 @@ footer {
   }
   .previous-guesses {
     @extend %handwriting;
+    overflow: hidden;
+    word-wrap: break-word;
     text-transform: uppercase;
     letter-spacing: 1.5em;
     line-height: 3em;
