@@ -1,0 +1,44 @@
+/*
+*= Hangman
+*/
+.hangman-area {
+  position: relative;
+}
+.hangman-area .base {
+  position: absolute;
+}
+.hangman-area .torso {
+  position: absolute;
+  left: 22em;
+  top: 9.5em;
+}
+.hangman-area .hat {
+  position: absolute;
+  left: 17em;
+  top: 3em;
+}
+.hangman-area .head {
+  position: absolute;
+  left: 19.8em;
+  top: 5em;
+}
+.hangman-area .left-arm {
+  position: absolute;
+  left: 19em;
+  top: 10em;
+}
+.hangman-area .right-arm {
+  position: absolute;
+  left: 22.5em;
+  top: 10em;
+}
+.hangman-area .left-leg {
+  position: absolute;
+  left: 20em;
+  top: 16em;
+}
+.hangman-area .right-leg {
+  position: absolute;
+  left: 23em;
+  top: 15em;
+}

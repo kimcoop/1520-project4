@@ -106,7 +106,9 @@ footer {
       cursor: pointer;
       margin: 0 2px 2px 0;
       &:last-child { margin-right: 0; }
-      &:hover { background: $secondary-B; }
+      &:hover { 
+        background: $secondary-B; 
+      }
       &.disabled {
         color: transparent;
         cursor: default;
@@ -138,7 +140,7 @@ footer {
     text-transform: uppercase;
     border-bottom: thick solid $color;
     &:last-child { margin-right: 0; }
-    .revealed { color: $primary; }
+    .revealed { color: $primary-light; }
   }
 }
 

@@ -131,6 +131,8 @@ footer {
   margin-bottom: 15px;
 }
 .guess-area .previous-guesses {
+  overflow: hidden;
+  word-wrap: break-word;
   text-transform: uppercase;
   letter-spacing: 1.5em;
   line-height: 3em;
@@ -193,7 +195,7 @@ footer {
   margin-right: 0;
 }
 #blanks .blank .revealed {
-  color: #2484de;
+  color: #6f83d6;
 }
 
 #alert {
@@ -279,7 +281,7 @@ h1, h2 {
 }
 
 h1 {
-  color: #6f83d6;
+  color: #2484de;
 }
 
 h2 {
