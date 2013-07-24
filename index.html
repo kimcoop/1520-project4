@@ -84,12 +84,12 @@
 
           <p>
             <strong>Program Due Date</strong>
-            Friday, June 28, 2013, by 11:59PM
+             Friday, July 26, 2013 by 11:59PM
           </p>
 
           <p>
             <strong>Handed In Date</strong>
-            Friday, June 28, 2013 ~2:00pm
+             Wednesday, July 24, 2013 ~ 11am
           </p>
 
           <p>
@@ -116,63 +116,73 @@
         <strong>Base views</strong>
         <ul>
           <li>index.html</li>
-          <li>forgot_password.php</li>
-          <li>admin.php</li>
-          <li>functions.php</li>
-          <li>routes.php</li>
-          <li>advisor.php</li>
-          <li>settings.php</li>
-          <li>course.php</li>
-          <li>index.php   </li>
-          <li>student.php</li>
           <li class="text-warning">init.php (DB init page)</li>
-          <li>student_dashboard.php</li>
         </ul>
         <strong>Templates (included views)</strong>
         <ul>
-          <li>templates/course_sidebar.php</li>
+          <li>templates/alert.php</li>
           <li>templates/header.php</li>
-          <li>templates/sessions.php</li>
-          <li>templates/courses.php</li>
-          <li>templates/notes.php</li>
-          <li>templates/student_sidebar.php</li>
           <li>templates/footer.php</li>
-          <li>templates/notice.php</li>
+          <li>templates/dialog.php</li>
+          <li>templates/hangman.php</li>
+          <li>templates/scores.php</li>
+          <li>templates/scores_list.html</li>
+        </ul>
+        <strong>JavaScripts</strong>
+        <ul>
+          <li>alert.js</li>
+          <li>app.js</li>
+          <li>hangman.js</li>
+          <li>illustrator.js</li>
+          <li>init.js</li>
+          <li>routes.js</li>
+          <li>score.js</li>
+          <li>simple-template.js</li>
+          <li>stats.js</li>
         </ul>
       </div>
       <div class="span4">
-        <strong>Models (classes)</strong>
+        <strong>Models</strong>
         <ul>
-          <li>models/course.php</li>
-          <li>models/requirement_course.php</li>
-          <li>models/user_course.php</li>
-          <li>models/note.php</li>
-          <li>models/session.php</li>
-          <li>models/requirement.php</li>
-          <li>models/user.php</li>
+          <li>models/score.php</li>
+          <li>models/word.php</li>
         </ul>
-        <strong>Libraries (for bootstrapping)</strong>
+        <strong>Styles</strong>
         <ul>
+          <li>css/_base.css</li>
+          <li>css/_dialog.css</li>
+          <li>css/_forms.css</li>
+          <li>css/_hangman.css</li>
+          <li>css/_links.css</li>
+          <li>css/_mixins.css</li>
+          <li>css/_nav.css</li>
+          <li>css/_structure.css</li>
+          <li>css/_tables.css</li>
+          <li>css/_typography.css</li>
+          <li>css/style.css (combines other CSS files)</li>
+        </ul>
+      </div>
+       <div class="span4">
+        <strong>Functions/Libraries</strong>
+        <ul>
+          <li>libs/functions.php</li>
+          <li>libs/routes.php</li>
           <li>libs/db.php</li>
           <li>libs/model.php</li>
           <li class="text-warning">libs/seeds.php (DB init script)</li>
         </ul>
-      </div>
-       <div class="span4">
         <strong>Other files</strong>
         <ul>
-          <li>css/style.css</li>
-          <li>files/config.txt</li>
-          <li>files/reqs.txt</li>
-          <li>files/sample_sessions.txt</li>
-          <li>files/courses.txt</li>
-          <li>files/sample_courses.txt</li>
-          <li>files/sample_users.txt</li>
-          <li>files/sample_notes.txt</li>
-          <li>files/sessions.txt</li>
-          <li>files/notes.txt</li>
-          <li>files/sample_requirements.txt</li>
-          <li>files/users.txt</li>
+          <li>css/words.txt</li>
+          <li>css/base.png</li>
+          <li>css/body.png</li>
+          <li>css/hangman-base.png</li>
+          <li>css/hat.png</li>
+          <li>css/head.png</li>
+          <li>css/left-arm.png</li>
+          <li>css/left-leg.png</li>
+          <li>css/right-arm.png</li>
+          <li>css/right-leg.png</li>
         </ul>
       </div>
     </div>
@@ -191,17 +201,13 @@
         <h3>Comments</h3>
         <strong>Initialization</strong>
         <p>
-          The included <strong class="text-warning">init.php</strong> loads  <strong class="text-warning">seeds.php</strong>, which is used to set up the database and populate it from incldued files. Click <a href="http://cs1520.cs.pitt.edu/~kac162/assig4/init.php"><strong>here</strong></a> to visit this page and initialize the database.
+          The included <strong class="text-warning">init.php</strong> loads  <strong class="text-warning">seeds.php</strong>, which is used to set up the hangman database and populate it from included words.txt file. Click <a href="http://cs1520.cs.pitt.edu/~kac162/assig4/init.php"><strong>here</strong></a> to visit this page and initialize the database.
         </p>
         <strong>Extra credit features included</strong>
         <ul>
-          <li>A user can stored a secret question/answer (accessible via Settings page). If present, these are presented during the "Forgot Password" flow before a user receives the reset password via email</li>
-          <li>When browsing course details, an advisor can use links to the student records to view each student</li>
+          <li>Hangman is drawn on the screen</li>
+          <li>Scores are viewable - user simply provides a username that is listed in the scores table</li>
         </ul>
-        <strong>Some other cool things implemented</strong>
-        <li>Course and user details pages are fully bookmarkable (done via a $_GET request based on ID rather than stored in $_SESSION)</li>
-        <li>Notes store session_id of the advising session, so that the two are associated (visible in the "Advising Sessions" tab of the user details page)</li>
-        <li>Sidebar on the user details page includes some extra details, including a gravatar image that will be visible if the user's email has a gravatar associated with it</li>
       </div>
     </div>
 

@@ -3,7 +3,7 @@
   include( 'libs/db.php' );
   include( 'libs/model.php' );
 
-  include( 'models/user.php' );
+  include( 'models/score.php' );
   include( 'models/word.php' );
   
   define( "SAMPLE_FILE_ROOT", 'files/' );

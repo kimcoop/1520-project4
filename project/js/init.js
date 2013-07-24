@@ -3,7 +3,6 @@ var Init = {
   setupEvents: function() {
     $('.username-form').on( 'submit', function(e) {
       e.preventDefault();
-      console.log( 'Init.checkForUsername()', Init.checkForUsername() );
       if (Init.checkForUsername()) Init.startNewRound();
       else return false;
     });

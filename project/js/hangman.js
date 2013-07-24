@@ -120,7 +120,7 @@ var Hangman = {
     while ( Hangman.word.indexOf( letter, startIndex ) > -1 ) {
       index = Hangman.word.indexOf( letter, startIndex );
       indices.push( index );
-      startIndex += index + 1;
+      startIndex = index + 1;
     }
     return indices;
   },

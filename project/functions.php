@@ -4,8 +4,6 @@ session_start();
 
 function __autoload($class) {
   $class = strtolower($class);
-  if ( $class == 'usercourse' ) 
-    $class = 'user_course';
   
   $file = 'models/' . $class . '.php';
   if ( file_exists( $file ))

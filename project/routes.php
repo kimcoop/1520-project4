@@ -24,7 +24,7 @@
         break;
     }
     exit;
-  endif; // $_GET['action']
+  endif;
 
   if ( isset($_POST['action']) ): 
     switch ( $_POST['action'] ) {
